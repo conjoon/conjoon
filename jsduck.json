@@ -1,0 +1,8 @@
+{
+    "--ignore-global": true,
+    "--output": "docs/api",
+    "--ignore-html": "locale",
+    "--": [
+    "src", "classic"
+]
+}
