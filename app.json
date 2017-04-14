@@ -53,12 +53,12 @@
      */
     "requires": [
         "font-awesome",
-        "theme-cn_default",
         "lib-cn_core",
         "lib-cn_comp",
         "app-cn_user",
         "app-cn_treenavviewport",
-        "app-cn_mail"
+        "app-cn_mail",
+        "theme-cn_default"
     ],
 
     /**
