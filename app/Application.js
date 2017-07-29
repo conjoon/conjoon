@@ -34,15 +34,13 @@ Ext.define('conjoon.Application', {
     ],
 
     controllers : [
+        'conjoon.cn_treenavviewport.app.PackageController',
         'conjoon.cn_user.controller.PackageController',
         'conjoon.cn_mail.controller.PackageController'
     ],
 
     name : 'conjoon',
 
-    defaultToken : 'home',
-
     applicationViewClassName : 'conjoon.view.main.Viewport'
-
 
 });
