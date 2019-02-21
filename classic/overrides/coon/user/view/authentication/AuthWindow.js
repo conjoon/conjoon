@@ -23,7 +23,7 @@
 /**
  * Custom form label for the AuthForm.
  */
-Ext.define('conjoon.overrides.cn_user.view.authentication.AuthWindow', {
+Ext.define('conjoon.overrides.coon.user.view.authentication.AuthWindow', {
 
     override : 'coon.user.view.authentication.AuthWindow',
 

@@ -1,39 +1,49 @@
 var harness = new Siesta.Harness.Browser.ExtJS();
 
 harness.configure({
-    title          : 'My Tests',
+    title          : 'conjoon',
     disableCaching : true,
     loaderPath     : {
 
 
-        'conjoon.Application' : '../app/Application.js',
-
-        'conjoon.view' : '../classic/src/view',
-
+        'conjoon.Application'    : '../app/Application.js',
+        'conjoon.view'           : '../classic/src/view',
         'conjoon.test.view.mock' : './classic/src/view/mock',
 
         /**
-         * Universal
+         * Classic app-cn_navport
          */
-        'conjoon.cn_treenavviewport' : '../../packages/local/app-cn_treenavviewport/src',
+        'coon.navport.view.pages'              : '../../packages/local/app-cn_navport/classic/src/view/pages',
+        'coon.navport.view.ContentContainer'   : '../../packages/local/app-cn_navport/classic/src/view/ContentContainer.js',
+        'coon.navport.view.ContentWrap'        : '../../packages/local/app-cn_navport/classic/src/view/ContentWrap.js',
+        'coon.navport.view.NavigationToolbar'  : '../../packages/local/app-cn_navport/classic/src/view/NavigationToolbar.js',
+        'coon.navport.view.NavigationTree'     : '../../packages/local/app-cn_navport/classic/src/view/NavigationTree.js',
+        'coon.navport.view.NavigationViewport' : '../../packages/local/app-cn_navport/classic/src/view/NavigationViewport.js',
+
+        /**
+         * Universal app-cn_navport
+         */
+        'coon.navport' : '../../packages/local/app-cn_navport/src',
+
 
         /**
          * Classic
          */
-        'conjoon.overrides' : '../classic/overrides',
-        'conjoon.cn_treenavviewport.view' : '../../packages/local/app-cn_treenavviewport/classic/src/view',
-        'conjoon.cn_mail.view'            : '../../packages/local/app-cn_mail/classic/src/view',
+        'conjoon.overrides.coon'    : '../classic/overrides/coon',
+        'conjoon.overrides'    : '../classic/overrides',
+        'conjoon.cn_mail.view' : '../../packages/local/app-cn_mail/classic/src/view',
+
 
         /**
          * Requirements
          */
-        'conjoon.cn_user.view'      : '../../packages/local/app-cn_user/classic/src/view',
-        'conjoon.cn_core'           : '../../packages/local/lib-cn_core/src',
-        'conjoon.cn_comp.container' : '../../packages/local/lib-cn_comp/classic/src/container',
-        'conjoon.cn_comp.app'       : '../../packages/local/lib-cn_comp/src/app',
-        'conjoon.cn_comp.list'      : '../../packages/local/lib-cn_comp/classic/src/list',
-        'conjoon.cn_comp.window'    : '../../packages/local/lib-cn_comp/classic/src/window',
-        'conjoon.cn_comp.form'      : '../../packages/local/lib-cn_comp/classic/src/form'
+        'coon.user.view'      : '../../packages/local/app-cn_user/classic/src/view',
+        'coon.core'           : '../../packages/local/lib-cn_core/src',
+        'coon.comp.container' : '../../packages/local/lib-cn_comp/classic/src/container',
+        'coon.comp.app'       : '../../packages/local/lib-cn_comp/src/app',
+        'coon.comp.list'      : '../../packages/local/lib-cn_comp/classic/src/list',
+        'coon.comp.window'    : '../../packages/local/lib-cn_comp/classic/src/window',
+        'coon.comp.form'      : '../../packages/local/lib-cn_comp/classic/src/form'
     },
     preload        : [
         conjoon.tests.config.paths.extjs.css.url,
@@ -55,14 +65,17 @@ harness.start({
     items : [{
         group : 'overrides',
         items : [{
-            group : 'cn_user',
+            group : 'coon',
             items : [{
-                group : 'view',
+                group : 'user',
                 items : [{
-                    group : 'authentication',
-                    items : [
-                        'classic/overrides/cn_user/view/authentication/AuthWindowTest.js'
-                    ]
+                    group : 'view',
+                    items : [{
+                        group : 'authentication',
+                        items : [
+                            'classic/overrides/coon/user/view/authentication/AuthWindowTest.js'
+                        ]
+                    }]
                 }]
             }]
         }]

@@ -41,6 +41,7 @@ Ext.define('conjoon.Application', {
 
     name : 'conjoon',
 
+
     applicationViewClassName : 'conjoon.view.main.Viewport'
 
 });

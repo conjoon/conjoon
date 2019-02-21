@@ -20,7 +20,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-describe('conjoon.overrides.cn_user.view.authentication.AuthWindowTest', function(t) {
+describe('conjoon.overrides.coon.user.view.authentication.AuthWindowTest', function(t) {
 
     var form;
 
@@ -32,13 +32,13 @@ describe('conjoon.overrides.cn_user.view.authentication.AuthWindowTest', functio
     });
 
     // load override first
-    t.requireOk('conjoon.overrides.cn_user.view.authentication.AuthWindow', function() {
+    t.requireOk('conjoon.overrides.coon.user.view.authentication.AuthWindow', function() {
 
         t.it("Should properly override the AuthWindow", function(t) {
 
-            var window = Ext.create('conjoon.cn_user.view.authentication.AuthWindow', {renderTo : document.body});
+            var window = Ext.create('coon.user.view.authentication.AuthWindow', {renderTo : document.body});
 
-            t.isInstanceOf(window.down('cn_user-authform'), 'conjoon.cn_user.view.authentication.AuthForm');
+            t.isInstanceOf(window.down('cn_user-authform'), 'coon.user.view.authentication.AuthForm');
 
         });
 

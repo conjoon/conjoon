@@ -34,7 +34,7 @@ describe('conjoon.view.main.ViewportControllerTest', function(t) {
     t.it("Should create the ViewportController", function(t) {
         viewportCtrl = Ext.create('conjoon.view.main.controller.ViewportController');
         t.expect(
-            viewportCtrl instanceof conjoon.cn_treenavviewport.view.controller.NavigationViewportController
+            viewportCtrl instanceof coon.navport.view.controller.NavigationViewportController
         ).toBe(true);
 
         t.expect(viewportCtrl.alias).toContain('controller.cn_app-mainviewport-ctrl');

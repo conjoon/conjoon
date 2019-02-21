@@ -22,7 +22,7 @@
 
 Ext.define('conjoon.test.view.mock.ApplicationMock', {
 
-    extend : 'conjoon.cn_comp.app.Application',
+    extend : 'coon.comp.app.Application',
 
     name : 'test',
 

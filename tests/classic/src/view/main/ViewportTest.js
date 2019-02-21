@@ -45,11 +45,11 @@ describe('conjoon.view.main.ViewportTest', function(t) {
         viewport = Ext.create('conjoon.view.main.Viewport');
 
 
-        t.expect(viewport.down('cn_treenavviewport-navtree').getWidth()).toBe(250);
+        t.expect(viewport.down('cn_navport-navtree').getWidth()).toBe(250);
         viewport.hideNavigation(true);
-        t.expect(viewport.down('cn_treenavviewport-navtree').getWidth()).toBe(64);
+        t.expect(viewport.down('cn_navport-navtree').getWidth()).toBe(64);
         viewport.hideNavigation(false);
-        t.expect(viewport.down('cn_treenavviewport-navtree').getWidth()).toBe(250);
+        t.expect(viewport.down('cn_navport-navtree').getWidth()).toBe(250);
     });
 
 

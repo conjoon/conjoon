@@ -36,13 +36,13 @@ describe('conjoon.ApplicationTest', function(t) {
 
         application = Ext.create('conjoon.Application');
 
-        t.expect(application instanceof conjoon.cn_comp.app.Application).toBe(true);
+        t.expect(application instanceof coon.comp.app.Application).toBe(true);
 
         t.expect(application.getName()).toBe('conjoon');
-        t.expect(application.getDefaultToken()).toBe('home');
+        t.expect(application.getDefaultToken()).not.toBe('home');
         t.expect(application.applicationViewClassName).toBe('conjoon.view.main.Viewport');
 
-        t.expect(application.controllers.items.length).toBe(2);
+        t.expect(application.controllers.items.length).toBe(3);
     });
 
 });

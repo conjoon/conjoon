@@ -50,10 +50,10 @@ before_script:
   - "cd /tmp && wget  -O app-cn_user.zip https://github.com/conjoon/app-cn_user/archive/master.zip"
   - "unzip app-cn_user.zip -d $CN_WORKSPACE/packages/local/"
   - "mv $CN_WORKSPACE/packages/local/app-cn_user-master $CN_WORKSPACE/packages/local/app-cn_user"
-## app-cn_treenavviewport
-  - "cd /tmp && wget  -O app-cn_treenavviewport.zip https://github.com/conjoon/app-cn_treenavviewport/archive/master.zip"
-  - "unzip app-cn_treenavviewport.zip -d $CN_WORKSPACE/packages/local/"
-  - "mv $CN_WORKSPACE/packages/local/app-cn_treenavviewport-master $CN_WORKSPACE/packages/local/app-cn_treenavviewport"
+## app-cn_navport
+  - "cd /tmp && wget  -O app-cn_navport.zip https://github.com/conjoon/app-cn_navport/archive/master.zip"
+  - "unzip app-cn_navport.zip -d $CN_WORKSPACE/packages/local/"
+  - "mv $CN_WORKSPACE/packages/local/app-cn_navport-master $CN_WORKSPACE/packages/local/app-cn_navport"
 ## app-cn_mail
   - "cd /tmp && wget  -O app-cn_mail.zip https://github.com/conjoon/app-cn_mail/archive/master.zip"
   - "unzip app-cn_mail.zip -d $CN_WORKSPACE/packages/local/"

@@ -23,7 +23,7 @@
 
 Ext.define('conjoon.test.view.mock.PackageControllerMock', {
 
-    extend : 'conjoon.cn_core.app.PackageController'
+    extend : 'coon.core.app.PackageController'
 
 
 
