@@ -1,10 +1,10 @@
 /**
  * conjoon
- * (c) 2007-2017 conjoon.org
+ * (c) 2007-2019 conjoon.org
  * licensing@conjoon.org
  *
  * conjoon
- * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ * Copyright (C) 2019 Thorsten Suckow-Homberg/conjoon.org
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@
  */
 Ext.define('conjoon.overrides.cn_user.view.authentication.AuthWindow', {
 
-    override : 'conjoon.cn_user.view.authentication.AuthWindow',
+    override : 'coon.user.view.authentication.AuthWindow',
 
     header : false,
 
@@ -62,7 +62,7 @@ Ext.define('conjoon.overrides.cn_user.view.authentication.AuthWindow', {
                       '<div class="prod">conjoon</div>' +
                       '<div class="meta">' +
                         '<span><a target="_blank" href="http://conjoon.org">About</a></span>' +
-                        '<span>&#169; 2007-2017 conjoon Open Source Project</span>' +
+                        '<span>&#169; 2007-2019 conjoon Open Source Project</span>' +
                       '</div>' +
                     '</div>'
         }];

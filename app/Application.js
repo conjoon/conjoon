@@ -1,10 +1,10 @@
 /**
  * conjoon
- * (c) 2007-2017 conjoon.org
+ * (c) 2007-2019 conjoon.org
  * licensing@conjoon.org
  *
  * conjoon
- * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ * Copyright (C) 2019 Thorsten Suckow-Homberg/conjoon.org
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,15 +27,15 @@
  */
 Ext.define('conjoon.Application', {
 
-    extend: 'conjoon.cn_comp.app.Application',
+    extend: 'coon.comp.app.Application',
 
     requires : [
         'conjoon.view.main.Viewport'
     ],
 
     controllers : [
-        'conjoon.cn_treenavviewport.app.PackageController',
-        'conjoon.cn_user.controller.PackageController',
+        'coon.navport.app.PackageController',
+        'coon.user.controller.PackageController',
         'conjoon.cn_mail.controller.PackageController'
     ],
 

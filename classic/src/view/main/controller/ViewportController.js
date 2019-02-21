@@ -1,10 +1,10 @@
 /**
  * conjoon
- * (c) 2007-2017 conjoon.org
+ * (c) 2007-2019 conjoon.org
  * licensing@conjoon.org
  *
  * conjoon
- * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ * Copyright (C) 2019 Thorsten Suckow-Homberg/conjoon.org
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,17 +22,17 @@
 
 /**
  * This is the extended controller for the main viewport of conjoon.
- * It derives from {@link conjoon.cn_treenavviewport.view.controller.NavigationViewportController}
+ * It derives from {@link coon.navport.view.controller.NavigationViewportController}
  * to add custom layout options to the navigation tree.
  */
 Ext.define('conjoon.view.main.controller.ViewportController', {
 
-    extend: 'conjoon.cn_treenavviewport.view.controller.NavigationViewportController',
+    extend: 'coon.navport.view.controller.NavigationViewportController',
 
     alias: 'controller.cn_app-mainviewport-ctrl',
 
     /**
-     * Callback for the {@link conjoon.cn_treenavviewport.view.NavigationToolbar}'s
+     * Callback for the {@link coon.navport.view.NavigationToolbar}'s
      * hideNavigation Button.
      *
      * @param {Ext.Button} btn
@@ -43,8 +43,8 @@ Ext.define('conjoon.view.main.controller.ViewportController', {
 
         var me      = this,
             view    = me.getView(),
-            navTree = view.lookup('cn_treenavviewport_ref_conwrap')
-                          .lookup('cn_treenavviewport_ref_navtree');
+            navTree = view.lookup('cn_navport_ref_conwrap')
+                          .lookup('cn_navport_ref_navtree');
 
         me.hideNavigation(!navTree.getMicro());
     },
@@ -59,10 +59,10 @@ Ext.define('conjoon.view.main.controller.ViewportController', {
 
         var me          = this,
             view        = me.getView(),
-            contentWrap = view.lookup('cn_treenavviewport_ref_conwrap'),
-            navTree     = contentWrap.lookup('cn_treenavviewport_ref_navtree'),
-            appLogo     = view.lookup('cn_treenavviewport_ref_tbar')
-                              .lookup('cn_treenavviewport_ref_applogo'),
+            contentWrap = view.lookup('cn_navport_ref_conwrap'),
+            navTree     = contentWrap.lookup('cn_navport_ref_navtree'),
+            appLogo     = view.lookup('cn_navport_ref_tbar')
+                              .lookup('cn_navport_ref_applogo'),
             newWidth    = hide ? 64 : 250;
 
         appLogo.animate({

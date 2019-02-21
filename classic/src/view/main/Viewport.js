@@ -1,10 +1,10 @@
 /**
  * conjoon
- * (c) 2007-2017 conjoon.org
+ * (c) 2007-2019 conjoon.org
  * licensing@conjoon.org
  *
  * conjoon
- * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ * Copyright (C) 2019 Thorsten Suckow-Homberg/conjoon.org
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@
  */
 Ext.define('conjoon.view.main.Viewport', {
 
-    extend: 'conjoon.cn_treenavviewport.view.NavigationViewport',
+    extend: 'coon.navport.view.NavigationViewport',
 
     requires : [
         'conjoon.view.main.controller.ViewportController'
