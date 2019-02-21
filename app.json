@@ -56,7 +56,7 @@
         "lib-cn_core",
         "lib-cn_comp",
         "app-cn_user",
-        "app-cn_treenavviewport",
+        "app-cn_navport",
         "app-cn_mail",
         "theme-cn_default"
     ],
@@ -220,11 +220,6 @@
         {
             "path": "app.js",
             "bundle": true
-        },
-        // load the Sims only in development mode.
-        {
-            "path"      : "../packages/local/app-cn_mail/src/data/mail/PackageSim.js",
-            "bootstrap" : true
         }
     ],
 
@@ -422,7 +417,10 @@
         "base": "${workspace.build.dir}/${build.environment}/${app.name}",
         "page": "index.html",
         "manifest": "${build.id}.json",
-        "js": "${build.id}/app.js",
+        "js": {
+            "version": "ES6",
+            "path": "${build.id}/app.js"
+        },
         "appCache": {
             "enable": false
         },

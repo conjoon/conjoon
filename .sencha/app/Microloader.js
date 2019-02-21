@@ -307,8 +307,12 @@ Ext.Microloader = Ext.Microloader || (function () {
 
             applyCacheBuster: function(url) {
                 var tstamp = new Date().getTime(),
-                    sep = url.indexOf('?') === -1 ? '?' : '&';
-                url = url + sep + "_dc=" + tstamp;
+                    sep = url.indexOf('?') === -1 ? '?' : '&',
+                    progressive = Ext.manifest.progressive,
+                    serviceWorker = progressive && progressive.serviceWorker;
+                if (!serviceWorker) {
+                    url = url + sep + "_dc=" + tstamp;
+                }
                 return url;
             },
 
@@ -393,7 +397,14 @@ Ext.Microloader = Ext.Microloader || (function () {
                 Microloader.urls = [];
                 Microloader.manifest = manifest;
                 Ext.manifest = Microloader.manifest.exportContent();
-
+                var progressive = Ext.manifest.progressive;
+                if (progressive && progressive.serviceWorker) {
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('./' + progressive.serviceWorker);
+                        Ext.Boot.config.disableCaching = false;
+                    }
+                }
+                
                 var assets = manifest.getAssets(),
                     cachedAssets = [],
                     asset, i, len, include, entry;

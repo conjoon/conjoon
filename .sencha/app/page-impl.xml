@@ -94,7 +94,6 @@
                         and
                         microload
                             -operation=manifest
-                            -jsonp=Ext.Microloader.setManifest
                             -fashion=${use.fashion}
                             -tpl=${build.microloader.json.tpl.external}
                             -out=${build.microloader.path}
@@ -317,11 +316,44 @@
                  value="&lt;html"/>
     </target>
 
+    <target name="-generate-progressive-webapp" depends="-init-compiler">
+        <if>
+            <x-is-false value="${skip.progressive}"/>
+            <then>
+                <x-compile refid="${compiler.ref.id}">
+                    <![CDATA[
+                    progressive-webapp
+                        -buildDir=${build.out.base.path}
+                    ]]>
+                </x-compile>
+            </then>
+        </if>
+    </target>
+    
+    
+    <target name="-generate-service-worker" depends="-init-compiler">
+        <if>
+            <x-is-false value="${skip.progressive}"/>
+            <then>
+                <x-compile refid="${compiler.ref.id}">
+                    <![CDATA[
+                    progressive-webapp
+                        -buildDir=${build.out.base.path}
+                        +serviceWorker
+                    ]]>
+                </x-compile>
+            </then>
+        </if>
+    </target>
+    
+    
     <target name="-before-page"/>
     <target name="-page"
             depends="-copy-app-resources,
+                     -generate-progressive-webapp,
                      -generate-deltas,
                      -build-output-page,
-                     -generate-cache-manifest"/>
+                     -generate-cache-manifest,
+                     -generate-service-worker"/>
     <target name="-after-page"/>
 </project>

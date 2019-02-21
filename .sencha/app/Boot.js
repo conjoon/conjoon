@@ -553,8 +553,14 @@ Ext.Boot = Ext.Boot || (function (emptyFn) {
                 Boot.isIE9 = Boot.hasReadyState && !Boot.hasAsync && Boot.hasDefer && Boot.hasOnLoad;
                 Boot.isIE10p = Boot.hasReadyState && Boot.hasAsync && Boot.hasDefer && Boot.hasOnLoad;
 
-                Boot.isIE10 = (new Function('/*@cc_on return @_jscript_version @*/')()) === 10;
-                Boot.isIE10m = Boot.isIE10 || Boot.isIE9 || Boot.isIE8;
+                if (Boot.isIE8) {
+                    Boot.isIE10 = false;
+                    Boot.isIE10m = true;
+                }
+                else {
+                    Boot.isIE10 = (new Function('/*@cc_on return @_jscript_version @*/')()) === 10;
+                    Boot.isIE10m = Boot.isIE10 || Boot.isIE9 || Boot.isIE8;
+                }
                 
                 // IE11 does not support conditional compilation so we detect it by exclusion
                 Boot.isIE11 = Boot.isIE10p && !Boot.isIE10;
