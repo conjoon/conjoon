@@ -34,14 +34,12 @@ Ext.define('conjoon.Application', {
     ],
 
     controllers : [
-        'coon.navport.app.PackageController',
-        'coon.user.controller.PackageController',
-        'conjoon.cn_mail.controller.PackageController'
+        'coon.navport.app.PackageController'
     ],
 
     name : 'conjoon',
 
 
-    applicationViewClassName : 'conjoon.view.main.Viewport'
+    applicationViewClassName : 'conjoon.view.main.Viewport',
 
 });

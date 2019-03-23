@@ -42,7 +42,7 @@ describe('conjoon.ApplicationTest', function(t) {
         t.expect(application.getDefaultToken()).not.toBe('home');
         t.expect(application.applicationViewClassName).toBe('conjoon.view.main.Viewport');
 
-        t.expect(application.controllers.items.length).toBe(3);
+        t.expect(application.controllers.items[0].$className).toBe('coon.navport.app.PackageController');
     });
 
 });
