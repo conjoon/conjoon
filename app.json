@@ -77,8 +77,7 @@
     "production": {
         "uses" : [
             "app-cn_imapuser",
-            "app-cn_mail",
-            "dev-cn_mailsim"
+            "app-cn_mail"
         ],
         "output": {
             "appCache": {
