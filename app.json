@@ -101,8 +101,10 @@
     },
     "development": {
         "uses" : [
+            "app-cn_imapuser",
             "app-cn_mail",
-            "dev-cn_mailsim"
+            "dev-cn_mailsim",
+            "dev-cn_imapusersim"
         ],
         "watch": {
             "delay": 250
