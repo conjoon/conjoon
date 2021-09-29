@@ -1,0 +1,11 @@
+{
+  "conjoon" : {
+    "config" : {
+      "application" : {
+        "plugins" : [
+          "extjs-plug-themeutil"
+        ]
+      }
+    }
+  }
+}

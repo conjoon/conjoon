@@ -23,13 +23,4 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-/**
- *
- */
-Ext.application({
-
-    name: "conjoon",
-
-    extend: "conjoon.Application"
-
-});
+//this file exists so the webpack build process will succeed

@@ -24,12 +24,17 @@
  */
 
 /**
- *
+ * Custom viewport to make sure the {@link conjoon.view.main.controller.ViewportController}
+ * is used with this view.
  */
-Ext.application({
+Ext.define("conjoon.view.main.Viewport", {
 
-    name: "conjoon",
+    extend: "coon.navport.view.NavigationViewport",
 
-    extend: "conjoon.Application"
+    requires: [
+        "conjoon.view.main.controller.ViewportController"
+    ],
+
+    controller: "cn_app-mainviewport-ctrl"
 
 });
