@@ -34,7 +34,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@conjoon/extjs-app-imapuser": "^0.1.0",
+    "@conjoon/extjs-app-imapuser": "^0.1.1",
     "@conjoon/extjs-app-webmail": "^0.1.0",
     "@conjoon/extjs-dev-imapusersim": "^1.0.1",
     "@conjoon/extjs-dev-webmailsim": "^0.1.0",
