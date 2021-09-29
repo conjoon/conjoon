@@ -1,7 +1,7 @@
 {
   "name": "conjoon",
   "product": "ext",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "JavaScript email client built with Sencha ExtJS and coon.js.",
   "repository": {
     "type": "git",
