@@ -26,6 +26,7 @@
     "ignorePatterns" : [
         "bootstrap.js",
         "webpack.config.js",
+        "webpack.prod.config.js",
         "**/build/*",
         "**/packages/remote/*"
     ],

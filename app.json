@@ -84,7 +84,19 @@
     "cacheParam": "_dc"
   },
   "production": {
+    "coon-js" : {
+      "env": "production",
+      "resources" : "coon-js"
+    },
+    "uses" : [
+      "extjs-app-imapuser",
+      "extjs-app-webmail",
+      "extjs-dev-imapusersim",
+      "extjs-dev-webmailsim",
+      "extjs-plug-themeutil"
+    ],
     "js": [
+      {"path": "./node_modules/@l8js/l8/dist/l8.runtime.umd.js", "compress":  false},
       {"path": "app.js", "bundle": true},
       {"path": "${app.webpack.bundle}", "compress": false }
     ],
@@ -100,8 +112,15 @@
     "cache": {
       "enable": true
     },
+    "language": {
+      "js": {
+        "input": "ES8",
+        "output": "ES8"
+      }
+    },
     "compressor": {
-      "type": "yui"
+      "type": "closure",
+      "polyfills": "none"
     }
   },
   "testing": {
