@@ -1,8 +1,8 @@
 {
-  "name": "conjoon",
+  "name": "@conjoon/conjoon",
   "product": "ext",
   "version": "0.1.0",
-  "description": "JavaScript email client built with Sencha ExtJS and coon.js.",
+  "description": "JavaScript email client powered by Sencha ExtJS and coon.js.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conjoon/conjoon.git"
