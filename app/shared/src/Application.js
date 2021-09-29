@@ -24,12 +24,37 @@
  */
 
 /**
- *
+ * The main application class. An instance of this class is created by app.js when it
+ * calls Ext.application(). This is the ideal place to handle application launch and
+ * initialization details.
  */
-Ext.application({
+Ext.define("conjoon.Application", {
+
+    extend: "coon.comp.app.Application",
+
+    requires: [
+        "conjoon.view.main.Viewport"
+    ],
+
+    controllers: [
+        "coon.navport.app.PackageController"
+    ],
 
     name: "conjoon",
 
-    extend: "conjoon.Application"
+    mainView: "conjoon.view.main.Viewport",
 
+    launch: function () {
+        Ext.ariaWarn = Ext.emptyFn;
+    },
+
+    onAppUpdate: function () {
+        Ext.Msg.confirm("Application Update", "This application has an update, reload?",
+            function (choice) {
+                if (choice === "yes") {
+                    window.location.reload();
+                }
+            }
+        );
+    }
 });

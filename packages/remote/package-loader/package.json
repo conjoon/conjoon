@@ -1,0 +1,22 @@
+{
+  "name": "package-loader",
+  "format": "1",
+  "version": "1.0.2",
+  "creator": "Sencha",
+  "summary": "Dynamic package loader",
+  "detailedDescription": "This package provides a mechanism to load additional code packages at runtime",
+  "type": "code",
+  "signatures": [
+    {
+      "name": "Sencha",
+      "uuid": "ae0e5fc5-598d-4466-bcba-759caaa69595",
+      "created": "2021-08-18T17:26:17Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "vT1dcpejstk\u003d",
+      "signature": "kdt5LEko4wPcEdN67N0d388QiOir1DZTgyHWm7i+y449LMPIKHBkVK8WLgpiU1KvHSwnBLxYFzhgQ4nMPTTeFrqxAyV0/gLBrzfvGFxVh7SipXtD3uuBOdJjLIm/PS2MWM0e7c1ZUn8PujmlApNZqLa5Iy7pZt+jkIAZjWZHWeVyMFvv/plIINn9uIDxlj/xHo4oImPYSQ8QiFpkdqFXacuR2pTp/VCOW0+3IcKlbuyh81JjkzH2kFkyN2xeH5ER9t/cqkcjEU991wxaBNQJspT+37hFgdp3j9cqYHTTxOlx1LOVbkC+8rZkvmrvK2TAdgOgXZqNbd1FGLkzd0x5mw\u003d\u003d"
+    }
+  ],
+  "classpath": "${package.dir}/src",
+  "framework": "ext",
+  "output": "${package.dir}/build"
+}

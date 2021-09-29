@@ -1,11 +1,7 @@
-/docs
 /build
-/tests/tests.config.js
-/tests/index.html
+/generatedFiles
+/cordova
+/node_modules
 /.idea
-/bootstrap.css
-/bootstrap.js
-/classic.json
-/classic.jsonp
-/modern.json
-/modern.jsonp
+*.env
+/.githooks/

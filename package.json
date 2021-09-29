@@ -1,0 +1,69 @@
+{
+  "name": "conjoon",
+  "product": "ext",
+  "version": "0.0.1",
+  "description": "JavaScript webmail application built with Sencha ExtJS and coon.js.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conjoon/conjoon.git"
+  },
+  "keywords": [
+    "webmail",
+    "sencha",
+    "extjs",
+    "l8js",
+    "l8",
+    "coonjs",
+    "conjoon",
+    "imap",
+    "material"
+  ],
+  "author": "Thorsten Suckow-Homberg <thorsten@suckow-homberg.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conjoon/conjoon/issues"
+  },
+  "homepage": "https://github.com/conjoon/conjoon#readme",
+  "scripts": {
+    "start": "npm run dev",
+    "clean": "rimraf build",
+    "dev": "webpack-dev-server --env.profile=desktop --env.browser=yes --env.verbose=no --env.cmdopts=--uses && npx node-git-hooks",
+    "build": "npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes",
+    "build:testing": "npm run clean && cross-env webpack --env.profile=desktop --env.treeshake=yes --env.cmdopts=--testing",
+    "prepare": "npx node-git-hooks",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "@conjoon/extjs-app-imapuser": "^0.1.0",
+    "@conjoon/extjs-app-webmail": "^0.1.0",
+    "@conjoon/extjs-dev-imapusersim": "^1.0.1",
+    "@conjoon/extjs-dev-webmailsim": "^0.1.0",
+    "@conjoon/extjs-theme-material": "^0.1.0",
+    "@coon-js/extjs-comp-navport": "^0.1.1",
+    "@coon-js/extjs-plug-themeutil": "^0.1.0",
+    "@l8js/l8": "^0.4.2",
+    "@sencha/ext": "^7.4.0",
+    "@sencha/ext-classic": "^7.4.0",
+    "@sencha/ext-classic-theme-material": "^7.4.0",
+    "@sencha/ext-ux": "^7.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-async-to-generator": "^7.5.0",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/preset-env": "^7.5.5",
+    "@sencha/ext-webpack-plugin": "^7.4.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "cross-env": "^5.2.0",
+    "lodash.find": "^4.6.0",
+    "portfinder": "^1.0.21",
+    "replace": "^1.1.1",
+    "webpack": "~4.39.2",
+    "webpack-cli": "~3.3.6",
+    "webpack-dev-server": "~3.8.0",
+    "node-git-hooks": "^1.0.6"
+  }
+}

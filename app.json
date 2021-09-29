@@ -1,182 +1,157 @@
 {
-    "name": "conjoon",
+  "name": "conjoon",
+  "namespace": "conjoon",
+  "version": "1.0.0.0",
+  "framework": "ext",
+  "template": "classicdesktop",
+  "indexHtmlPath": "index.html",
+  "requires": [
+    "font-awesome",
+    "package-loader",
+    "extjs-comp-navport"
+  ],
+
+  "builds": {
+    "desktop": {
+      "toolkit": "classic",
+      "theme": "extjs-theme-material",
+      "sass": {
+        "generated": {
+          "var": "${build.id}/sass/save.scss",
+          "src": "${build.id}/sass/save"
+        }
+      }
+    }
+  },
+
+  "classpath": ["app/shared/src","app/${build.id}/src"],
+  "overrides": ["app/shared/overrides","app/${build.id}/overrides"],
+
+  "sass": {
     "namespace": "conjoon",
-    "version": "1.0.0.0",
-    "framework": "ext",
-    "requires": [
-        "font-awesome",
-        "lib-cn_navport"
+    "etc": [
+      "sass/etc/all.scss"
     ],
-    "indexHtmlPath": "index.html",
-    "classpath": [
-        "app",
-        "${toolkit.name}/src"
+    "var": [
+      "app/shared/sass/var.scss",
+      "app/${build.id}/sass/var.scss"
     ],
-    "overrides": [
-        "overrides",
-        "${toolkit.name}/overrides"
-    ],
-    "fashion": {
-        "missingParameters": "error",
-        "inliner": {
+    "src": [
+      "app/shared/src/sass/src.scss",
+      "app/${build.id}/sass/src.scss"
+    ]
+  },
 
-            "enable": false
-        }
-    },
-    "sass": {
-        "namespace": "",
-        "etc": [
-            "sass/etc/all.scss",
-            "${toolkit.name}/sass/etc/all.scss"
-        ],
-        "var": [
-            "sass/var/all.scss",
-            "sass/var",
-            "${toolkit.name}/sass/var/all.scss",
-            "${toolkit.name}/sass/var"
-        ],
-        "src": [
-            "sass/src",
-            "${toolkit.name}/sass/src"
-        ]
-    },
+  "resources": [
+    { "path": "resources", "output": "shared" }
+
+    ,{ "path": "resources/${build.id}" }
+
+  ],
+
+  "output": {
+    "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+    "page": "index.html",
+    "manifest": "generatedFiles/${build.id}.json",
+    "js": "generatedFiles/${build.id}/app.js",
+    "appCache": {"enable": false},
+    "resources": {
+      "path": "${build.id}/resources",
+      "shared": "resources"
+    }
+  },
+  
+  "fashion": {
+"missingParameters": "error",
+    "inliner": {"enable": false}
+  },
+
+  "js": [
+  ],
+
+  "classic": {"js": []},
+  "modern": {"js": []},
+
+  "css": [
+    {
+      "path": "${build.out.css.path}",
+      "bundle": true,
+      "exclude": ["fashion"]
+    }
+  ],
+  "loader": {
+    "cache": false,
+    "cacheParam": "_dc"
+  },
+  "production": {
     "js": [
-        {
-            "path": "app.js",
-            "bundle": true
-        }
+      {"path": "app.js", "bundle": true},
+      {"path": "${app.webpack.bundle}", "compress": false }
     ],
-    "classic": {
-        "js": [
-            {
-                "path": "${framework.dir}/build/ext-all-rtl-debug.js"
-            }
-        ]
-    },
-    "modern": {
-        "js": [
-            {
-                "path": "${framework.dir}/build/ext-modern-all-debug.js"
-            }
-        ]
-    },
-    "css": [
-        {
-
-            "path": "${build.out.css.path}",
-            "bundle": true,
-            "exclude": ["fashion"]
-        }
-    ],
-    "loader": {
-
-         "cache": false,
-
-         "cacheParam": "_dc"
-     },
-    "production": {
-        "uses" : [
-            "app-cn_imapuser",
-            "app-cn_mail"
-        ],
-        "output": {
-            "appCache": {
-                "enable": true,
-                "path": "cache.appcache"
-            }
-        },
-        "loader": {
-            "cache": "${build.timestamp}"
-        },
-        "cache": {
-            "enable": true
-        },
-        "compressor": {
-            "type": "yui",
-            "polyfills": "none"
-
-        }
-    },
-    "testing": {
-    },
-    "development": {
-        "uses" : [
-            "app-cn_imapuser",
-            "app-cn_mail",
-            "dev-cn_mailsim",
-            "dev-cn_imapusersim"
-        ],
-        "watch": {
-            "delay": 250
-        },
-        "compressor": {
-            "polyfills": "none"
-        }
-    },
-    "bootstrap": {
-        "base": "${app.dir}",
-
-        "manifest": "${build.id}.json",
-
-        "microloader": "bootstrap.js",
-        "css": "bootstrap.css"
-    },
     "output": {
-        "base": "${workspace.build.dir}/${build.environment}/${app.name}",
-        "page": "index.html",
-        "manifest": "${build.id}.json",
-        "js": {
-            "base" : "${build.id}/app.js",
-            "version" : "ES6"
-        },
-        "appCache": {
-            "enable": false
-        },
-        "resources": {
-            "path": "${build.id}/resources",
-            "shared": "resources"
-        }
+      "appCache": {
+        "enable": false,
+        "path": "cache.appcache"
+      }
+    },
+    "loader": {
+      "cache": "${build.timestamp}"
     },
     "cache": {
-        "enable": false,
-        "deltas": "${build.id}/deltas"
+      "enable": true
     },
-    "appCache": {
-        "cache": [
-            "index.html"
-        ],
-        "network": [
-            "*"
-        ],
-        "fallback": []
+    "compressor": {
+      "type": "yui"
+    }
+  },
+  "testing": {
+    "js": [
+      {"path": "app.js", "bundle": true},
+      {"path": "${app.webpack.bundle}", "compress": false }
+    ]
+  },
+  "development": {
+    "coon-js" : {
+      "env": "development",
+      "resources" : "coon-js"
     },
-    "resources": [
-        {
-            "path": "resources",
-            "output": "shared"
-        },
-        {
-            "path": "${toolkit.name}/resources"
-        },
-        {
-            "path": "${build.id}/resources"
-        }
+    "uses" : [
+      "extjs-app-imapuser",
+      "extjs-app-webmail",
+      "extjs-dev-imapusersim",
+      "extjs-dev-webmailsim",
+      "extjs-plug-themeutil"
     ],
-    "archivePath": "archive/${build.id}",
-    "builds": {
-        "classic": {
-            "toolkit": "classic",
-            "theme": "theme-cn_default",
-            "sass": {
-                "generated": {
-                    "var": "classic/sass/save.scss",
-                    "src": "classic/sass/save"
-                }
-            }
-        }
-    },
-    "ignore": [
-        "(^|/)CVS(/?$|/.*?$)"
+    "js": [
+      {"path": "./node_modules/@l8js/l8/dist/l8.runtime.umd.js"},
+      {"path": "app.js", "bundle": true},
+      {"path": "main.js"}
     ],
-    "id": "4d97d035-fd12-43f6-8aba-39df650a1301"
+    "watch": {
+      "delay": 250
+    }
+  },
+  "bootstrap": {
+    "base": "${app.dir}",
+"manifest": "generatedFiles/${build.id}.json",
+    "microloader": "generatedFiles/bootstrap.js",
+    "css": "generatedFiles/bootstrap.css"
+  },
+
+  "cache": {
+    "enable": false,
+    "deltas": "${build.id}/deltas"
+  },
+
+  "appCache": {
+    "cache": ["index.html"],
+    "network": ["*"],
+    "fallback": []
+  },
+
+
+  "archivePath": "archive/${build.id}",
+
+  "ignore": ["(^|/)CVS(/?$|/.*?$)"],
+  "id": "ff992754-7c7c-4238-80aa-c87d2c3ceafb"
 }
