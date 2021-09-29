@@ -28,7 +28,9 @@
     "start": "npm run dev",
     "clean": "rimraf build",
     "dev": "webpack-dev-server --env.profile=desktop --env.browser=yes --env.verbose=no --env.cmdopts=--uses",
-    "build": "npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes",
+    "build": "npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes --env.cmdopts=--uses",
+    "preview" : "webpack-dev-server --config ./webpack.prod.config.js --open",
+    "build:preview" : "npm run build && npm run preview",
     "build:testing": "npm run clean && cross-env webpack --env.profile=desktop --env.treeshake=yes --env.cmdopts=--testing",
     "prepare": "npx node-git-hooks",
     "postversion": "git push && git push --tags"
