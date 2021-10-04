@@ -1,176 +1,211 @@
 {
-  "name": "conjoon",
-  "namespace": "conjoon",
-  "version": "1.0.0.0",
-  "framework": "ext",
-  "template": "classicdesktop",
-  "indexHtmlPath": "index.html",
-  "requires": [
-    "font-awesome",
-    "package-loader",
-    "extjs-comp-navport"
-  ],
-
-  "builds": {
-    "desktop": {
-      "toolkit": "classic",
-      "theme": "extjs-theme-material",
-      "sass": {
-        "generated": {
-          "var": "${build.id}/sass/save.scss",
-          "src": "${build.id}/sass/save"
-        }
-      }
-    }
-  },
-
-  "classpath": ["app/shared/src","app/${build.id}/src"],
-  "overrides": ["app/shared/overrides","app/${build.id}/overrides"],
-
-  "sass": {
+    "name": "conjoon",
     "namespace": "conjoon",
-    "etc": [
-      "sass/etc/all.scss"
+    "version": "1.0.0.0",
+    "framework": "ext",
+    "template": "classicdesktop",
+    "indexHtmlPath": "index.html",
+    "requires": [
+        "font-awesome",
+        "package-loader",
+        "extjs-comp-navport"
     ],
-    "var": [
-      "app/shared/sass/var.scss",
-      "app/${build.id}/sass/var.scss"
-    ],
-    "src": [
-      "app/shared/src/sass/src.scss",
-      "app/${build.id}/sass/src.scss"
-    ]
-  },
-
-  "resources": [
-    { "path": "resources", "output": "shared" }
-
-    ,{ "path": "resources/${build.id}" }
-
-  ],
-
-  "output": {
-    "base": "${workspace.build.dir}/${build.environment}/${app.name}",
-    "page": "index.html",
-    "manifest": "generatedFiles/${build.id}.json",
-    "js": "generatedFiles/${build.id}/app.js",
-    "appCache": {"enable": false},
-    "resources": {
-      "path": "${build.id}/resources",
-      "shared": "resources"
-    }
-  },
-  
-  "fashion": {
-"missingParameters": "error",
-    "inliner": {"enable": false}
-  },
-
-  "js": [
-  ],
-
-  "classic": {"js": []},
-  "modern": {"js": []},
-
-  "css": [
-    {
-      "path": "${build.out.css.path}",
-      "bundle": true,
-      "exclude": ["fashion"]
-    }
-  ],
-  "loader": {
-    "cache": false,
-    "cacheParam": "_dc"
-  },
-  "production": {
-    "coon-js" : {
-      "env": "production",
-      "resources" : "coon-js"
+    "builds": {
+        "desktop": {
+            "toolkit": "classic",
+            "theme": "extjs-theme-material",
+            "sass": {
+                "generated": {
+                    "var": "${build.id}/sass/save.scss",
+                    "src": "${build.id}/sass/save"
+                }
+            }
+        }
     },
-    "uses" : [
-      "extjs-app-imapuser",
-      "extjs-app-webmail",
-      "extjs-dev-imapusersim",
-      "extjs-dev-webmailsim",
-      "extjs-plug-themeutil"
+    "classpath": [
+        "app/shared/src",
+        "app/${build.id}/src"
     ],
-    "js": [
-      {"path": "./node_modules/@l8js/l8/dist/l8.runtime.umd.js", "compress":  false},
-      {"path": "app.js", "bundle": true},
-      {"path": "${app.webpack.bundle}", "compress": false }
+    "overrides": [
+        "app/shared/overrides",
+        "app/${build.id}/overrides"
+    ],
+    "sass": {
+        "namespace": "conjoon",
+        "etc": [
+            "sass/etc/all.scss"
+        ],
+        "var": [
+            "app/shared/sass/var.scss",
+            "app/${build.id}/sass/var.scss"
+        ],
+        "src": [
+            "app/shared/src/sass/src.scss",
+            "app/${build.id}/sass/src.scss"
+        ]
+    },
+    "resources": [
+        {
+            "path": "resources",
+            "output": "shared"
+        },
+        {
+            "path": "resources/${build.id}"
+        }
     ],
     "output": {
-      "appCache": {
-        "enable": false,
-        "path": "cache.appcache"
-      }
+        "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "page": "index.html",
+        "manifest": "generatedFiles/${build.id}.json",
+        "js": "generatedFiles/${build.id}/app.js",
+        "appCache": {
+            "enable": false
+        },
+        "resources": {
+            "path": "${build.id}/resources",
+            "shared": "resources"
+        }
     },
+    "fashion": {
+        "missingParameters": "error",
+        "inliner": {
+            "enable": false
+        }
+    },
+    "js": [
+    ],
+    "classic": {
+        "js": []
+    },
+    "modern": {
+        "js": []
+    },
+    "css": [
+        {
+            "path": "${build.out.css.path}",
+            "bundle": true,
+            "exclude": [
+                "fashion"
+            ]
+        }
+    ],
     "loader": {
-      "cache": "${build.timestamp}"
+        "cache": false,
+        "cacheParam": "_dc"
+    },
+    "production": {
+        "coon-js": {
+            "env": "production",
+            "resources": "coon-js"
+        },
+        "uses": [
+            "extjs-app-imapuser",
+            "extjs-app-webmail",
+            "extjs-dev-imapusersim",
+            "extjs-dev-webmailsim",
+            "extjs-ctrl-simmanager",
+            "extjs-plug-themeutil"
+        ],
+        "js": [
+            {
+                "path": "./node_modules/@l8js/l8/dist/l8.runtime.umd.js",
+                "compress": false
+            },
+            {
+                "path": "app.js",
+                "bundle": true
+            },
+            {
+                "path": "${app.webpack.bundle}",
+                "compress": false
+            }
+        ],
+        "output": {
+            "appCache": {
+                "enable": false,
+                "path": "cache.appcache"
+            }
+        },
+        "loader": {
+            "cache": "${build.timestamp}"
+        },
+        "cache": {
+            "enable": true
+        },
+        "language": {
+            "js": {
+                "input": "ES8",
+                "output": "ES8"
+            }
+        },
+        "compressor": {
+            "type": "closure",
+            "polyfills": "none"
+        }
+    },
+    "testing": {
+        "js": [
+            {
+                "path": "app.js",
+                "bundle": true
+            },
+            {
+                "path": "${app.webpack.bundle}",
+                "compress": false
+            }
+        ]
+    },
+    "development": {
+        "coon-js": {
+            "env": "development",
+            "resources": "coon-js"
+        },
+        "uses": [
+            "extjs-app-imapuser",
+            "extjs-app-webmail",
+            "extjs-dev-imapusersim",
+            "extjs-dev-webmailsim",
+            "extjs-plug-themeutil",
+            "extjs-ctrl-simmanager"
+        ],
+        "js": [
+            {
+                "path": "./node_modules/@l8js/l8/dist/l8.runtime.umd.js"
+            },
+            {
+                "path": "app.js",
+                "bundle": true
+            },
+            {
+                "path": "main.js"
+            }
+        ],
+        "watch": {
+            "delay": 250
+        }
+    },
+    "bootstrap": {
+        "base": "${app.dir}",
+        "manifest": "generatedFiles/${build.id}.json",
+        "microloader": "generatedFiles/bootstrap.js",
+        "css": "generatedFiles/bootstrap.css"
     },
     "cache": {
-      "enable": true
+        "enable": false,
+        "deltas": "${build.id}/deltas"
     },
-    "language": {
-      "js": {
-        "input": "ES8",
-        "output": "ES8"
-      }
+    "appCache": {
+        "cache": [
+            "index.html"
+        ],
+        "network": [
+            "*"
+        ],
+        "fallback": []
     },
-    "compressor": {
-      "type": "closure",
-      "polyfills": "none"
-    }
-  },
-  "testing": {
-    "js": [
-      {"path": "app.js", "bundle": true},
-      {"path": "${app.webpack.bundle}", "compress": false }
-    ]
-  },
-  "development": {
-    "coon-js" : {
-      "env": "development",
-      "resources" : "coon-js"
-    },
-    "uses" : [
-      "extjs-app-imapuser",
-      "extjs-app-webmail",
-      "extjs-dev-imapusersim",
-      "extjs-dev-webmailsim",
-      "extjs-plug-themeutil"
+    "archivePath": "archive/${build.id}",
+    "ignore": [
+        "(^|/)CVS(/?$|/.*?$)"
     ],
-    "js": [
-      {"path": "./node_modules/@l8js/l8/dist/l8.runtime.umd.js"},
-      {"path": "app.js", "bundle": true},
-      {"path": "main.js"}
-    ],
-    "watch": {
-      "delay": 250
-    }
-  },
-  "bootstrap": {
-    "base": "${app.dir}",
-"manifest": "generatedFiles/${build.id}.json",
-    "microloader": "generatedFiles/bootstrap.js",
-    "css": "generatedFiles/bootstrap.css"
-  },
-
-  "cache": {
-    "enable": false,
-    "deltas": "${build.id}/deltas"
-  },
-
-  "appCache": {
-    "cache": ["index.html"],
-    "network": ["*"],
-    "fallback": []
-  },
-
-
-  "archivePath": "archive/${build.id}",
-
-  "ignore": ["(^|/)CVS(/?$|/.*?$)"],
-  "id": "ff992754-7c7c-4238-80aa-c87d2c3ceafb"
+    "id": "ff992754-7c7c-4238-80aa-c87d2c3ceafb"
 }
