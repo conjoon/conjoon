@@ -32,6 +32,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
 	<title>conjoon</title>
 
+  <style type="text/css">
+
+    body {
+      background-color:#303030!important;
+    }
+
+    #splash {
+      animation: fadeIn linear 9s;
+      margin-top:20%;
+      font-size:18px;
+      text-align:center;
+      color:#d6d6d6;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+  </style>
+
   <script type="text/javascript">
     var Ext = Ext || {};
     Ext.beforeLoad = function (tags) {
@@ -45,7 +65,10 @@
   <!-- The line below must be kept intact for Sencha Cmd to build your application -->
   <script id="microloader" data-app="d0ab119c-676a-4d9c-8371-256d511adb8d" type="text/javascript" src="generatedFiles/bootstrap.js"></script>
 </head>
-  <body style="background:#303030">
-
+  <body>
+    <div id="splash">
+        <div>LOADING...</div>
+      <i style="margin:20px;" class="fa fa-spinner fa-spin"></i>
+    </div>
   </body>
 </html>

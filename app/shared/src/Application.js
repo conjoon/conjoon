@@ -44,11 +44,21 @@ Ext.define("conjoon.Application", {
 
     mainView: "conjoon.view.main.Viewport",
 
-    launch: function () {
+    launchHook: function () {
+        Ext.getBody().removeCls("launching");
+
+        const splash = document.getElementById("splash");
+        if (splash) {
+            splash.parentNode.removeChild(splash);
+        }
+
         Ext.ariaWarn = Ext.emptyFn;
+
+        return this.callParent(arguments);
     },
 
     onAppUpdate: function () {
+
         Ext.Msg.confirm("Application Update", "This application has an update, reload?",
             function (choice) {
                 if (choice === "yes") {
