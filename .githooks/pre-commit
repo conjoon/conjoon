@@ -1,2 +1,2 @@
 #!/bin/sh
-npx eslint ./
+npx --no-install commitlint --edit "$1" && npx eslint ./

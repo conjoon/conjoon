@@ -29,11 +29,15 @@
     "clean": "rimraf build",
     "dev": "webpack-dev-server --env.profile=desktop --env.browser=yes --env.verbose=no --env.cmdopts=--uses",
     "build": "npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes --env.cmdopts=--uses",
-    "preview" : "webpack-dev-server --config ./webpack.prod.config.js --open",
-    "build:preview" : "npm run build && npm run preview",
+    "preview": "webpack-dev-server --config ./webpack.prod.config.js --open",
+    "build:preview": "npm run build && npm run preview",
     "build:testing": "npm run clean && cross-env webpack --env.profile=desktop --env.treeshake=yes --env.cmdopts=--testing",
     "prepare": "npx node-git-hooks",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch && npm run postversion",
+    "release:minor": "standard-version --release-as minor && npm run postversion",
+    "release:major": "standard-version --release-as major && npm run postversion"
   },
   "dependencies": {
     "@conjoon/extjs-app-imapuser": "^0.1.1",
@@ -43,7 +47,7 @@
     "@conjoon/extjs-theme-material": "^0.1.0",
     "@coon-js/extjs-comp-navport": "^0.1.1",
     "@coon-js/extjs-plug-themeutil": "^0.1.0",
-    "@l8js/l8": "^0.4.2",
+    "@l8js/l8": "^0.5.2",
     "@sencha/ext": "^7.4.0",
     "@sencha/ext-classic": "^7.4.0",
     "@sencha/ext-classic-theme-material": "^7.4.0",
@@ -56,6 +60,7 @@
     "@babel/plugin-transform-async-to-generator": "^7.5.0",
     "@babel/plugin-transform-regenerator": "^7.4.5",
     "@babel/preset-env": "^7.5.5",
+    "@sencha/cmd": "^7.4.45",
     "@sencha/ext-webpack-plugin": "^7.4.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-module-exports": "^1.0.2",
@@ -67,6 +72,9 @@
     "replace": "^1.1.1",
     "webpack": "~4.39.2",
     "webpack-cli": "~3.3.6",
-    "webpack-dev-server": "~3.8.0"
+    "webpack-dev-server": "~3.8.0",
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "standard-version": "^9.3.1"
   }
 }
