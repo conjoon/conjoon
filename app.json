@@ -95,7 +95,7 @@
     },
     "production": {
         "coon-js": {
-            "env": "production",
+            "env": "prod",
             "resources": "coon-js"
         },
         "uses": [
@@ -157,7 +157,7 @@
     },
     "development": {
         "coon-js": {
-            "env": "development",
+            "env": "dev",
             "resources": "coon-js"
         },
         "uses": [
