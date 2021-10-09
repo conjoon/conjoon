@@ -5,3 +5,4 @@
 /.idea
 *.env
 /package.dev.json
+/package.prod.json
