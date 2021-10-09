@@ -4,3 +4,4 @@
 /node_modules
 /.idea
 *.env
+/package.dev.json
