@@ -6,3 +6,4 @@
 *.env
 /package.dev.json
 /package.prod.json
+/*.log
