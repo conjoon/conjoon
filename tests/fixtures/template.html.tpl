@@ -1,0 +1,1 @@
+<div>${quote.text}, ${quote.author}</div>
