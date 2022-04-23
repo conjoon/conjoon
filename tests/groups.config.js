@@ -36,4 +36,13 @@ export default [{
 
         }]
     }]
+}, {
+    group: "universal",
+    items: [{
+        group: "conjoon",
+        items: [{
+            name: "Application",
+            url: "shared/src/ApplicationTest.js"
+        }]
+    }]
 }];
