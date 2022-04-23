@@ -33,17 +33,33 @@ export default {
     timeout: 750,
 
     loaderPath: {
+
+        "Ext.Package": "../node_modules/@coon-js/extjs-package-loader/packages/package-loader/src/Package.js",
+        "Ext.package": "../node_modules/@coon-js/extjs-package-loader/packages/package-loader/src/package",
+
+        /**
+         * Universal
+         */
+        "conjoon.Application": "../app/shared/src/Application.js",
+
         /**
          * Classic
          */
         "conjoon": "../app/desktop/src",
+
 
         /**
          * Requirements
          */
         "coon.core": "../node_modules/@coon-js/extjs-lib-core/src/",
         "coon.comp": "../node_modules/@coon-js/extjs-lib-comp/src/",
-        "coon.navport": "../node_modules/@coon-js/extjs-comp-navport/src/"
+        "coon.navport": "../node_modules/@coon-js/extjs-comp-navport/src/",
+
+        "coon.comp.component.AnnouncementBar": "../node_modules/@coon-js/extjs-lib-comp/classic/src/component/AnnouncementBar.js",
+        "coon.navport.view.NavigationToolbar": "../node_modules/@coon-js/extjs-comp-navport/classic/src/view/NavigationToolbar.js",
+        "coon.navport.view.NavigationViewport": "../node_modules/@coon-js/extjs-comp-navport/classic/src/view/NavigationViewport.js",
+        "coon.comp.container.Viewport": "../node_modules/@coon-js/extjs-lib-comp/classic/src/container/Viewport.js"
+
     },
 
     preload: {
