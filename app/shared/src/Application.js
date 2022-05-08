@@ -33,6 +33,8 @@ Ext.define("conjoon.Application", {
     extend: "coon.comp.app.Application",
 
     requires: [
+        // @define l8
+        "l8",
         "conjoon.view.main.Viewport",
         "coon.core.ConfigManager",
         "coon.comp.component.AnnouncementBar"
@@ -51,6 +53,12 @@ Ext.define("conjoon.Application", {
      * launches the app.
      */
     launch () {
+
+        Ext.fireEvent(
+            "conjoon.application.TitleAvailable",
+            this,
+            coon.core.ConfigManager.get("conjoon", "title")
+        );
 
         if (!["denied", "granted"].includes(Notification.permission)) {
             coon.Announcement.show({

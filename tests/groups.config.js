@@ -43,6 +43,12 @@ export default [{
         items: [{
             name: "Application",
             url: "shared/src/ApplicationTest.js"
+        }, {
+            group: "plugin",
+            items: [{
+                name: "TitleChangePlugin",
+                url: "shared/src/plugin/TitleChangePluginTest.js"
+            }]
         }]
     }]
 }];
