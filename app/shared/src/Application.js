@@ -57,7 +57,7 @@ Ext.define("conjoon.Application", {
         Ext.fireEvent(
             "conjoon.application.TitleAvailable",
             this,
-            coon.core.ConfigManager.get("conjoon", "title")
+            coon.core.ConfigManager.get("conjoon", "tagline")
         );
 
         if (!["denied", "granted"].includes(Notification.permission)) {

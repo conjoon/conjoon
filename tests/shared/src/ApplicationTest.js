@@ -76,14 +76,14 @@ StartTest(t => {
                 let configSpy = t.spyOn(coon.core.ConfigManager, "get").and.callThrough();
                 const APP_TITLE = "APP_TITLE";
 
-                coon.core.ConfigManager.register("conjoon", {title: APP_TITLE, announcement: {message: "test announcement"}});
+                coon.core.ConfigManager.register("conjoon", {tagline: APP_TITLE, announcement: {message: "test announcement"}});
                 announcementSpy = t.spyOn(coon.Announcement, "show").and.callFake(() => {});
                 conjoon.Application.prototype.launch();
                 t.expect(announcementSpy.calls.all().length).toBe(1);
                 t.expect(announcementSpy.calls.mostRecent().args[0].message).toBe("test announcement");
                 t.expect(announcementSpy.calls.mostRecent().args[0].type).toBe("success");
 
-                t.expect(configSpy.calls.first().args).toEqual(["conjoon", "title"]);
+                t.expect(configSpy.calls.first().args).toEqual(["conjoon", "tagline"]);
                 t.expect(fireSpy.calls.mostRecent().args).toEqual([
                     "conjoon.application.TitleAvailable",
                     conjoon.Application.prototype,
