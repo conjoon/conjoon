@@ -27,3 +27,5 @@
  * Require additional classes to make sure their source is in the build.
  */
 Ext.require("conjoon.plugin.WorkbenchQuotes");
+
+Ext.require("coon.core.service.*");
