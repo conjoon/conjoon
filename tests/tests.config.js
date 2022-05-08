@@ -41,6 +41,8 @@ export default {
          * Universal
          */
         "conjoon.Application": "../app/shared/src/Application.js",
+        "conjoon.plugin.TitleChangePlugin": "../app/shared/src/plugin/TitleChangePlugin.js",
+
 
         /**
          * Classic
