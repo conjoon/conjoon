@@ -1,8 +1,17 @@
 {
     "conjoon": {
-        "plugins":{
+        "services": {
+            "coon.core.service.UserImageService": {
+                "xclass": "coon.core.service.GravatarService",
+                "args":   [{
+                    "parameters" :  {"d":  "blank"}
+                }]
+            }
+        },
+        "plugins": {
             "application": [
-                "extjs-plug-themeutil"
+                "extjs-plug-themeutil",
+                "conjoon.plugin.TitleChangePlugin"
             ],
             "components": [
                 {
@@ -24,7 +33,9 @@
             ]
         },
         "application": {
-            "title": "conjoon demo",
+            "title": "conjoon",
+            "tagline": "webmail made easy",
+            "titleTpl": "${title} | conjoon",
             "announcement": {
                 "message": "Thank you for using conjoon. Leave a ⭐ at <a target=\"_blank\" href=\"https://github.com/conjoon/conjoon\">Github</a> if you like it!",
                 "type": "success"
@@ -37,9 +48,10 @@
                     "registerController": true
                 },
                 "config": {
+                    "title": "Login",
                     "service": {
                         "rest-imapuser": {
-                            "base": "https://php-ms-imapuser.ddev.site/rest-imapuser/api/v0"
+                            "base": "https://ddev-ms-email.ddev.site/rest-imapuser/api/v0"
                         }
                     }
                 }
@@ -50,7 +62,7 @@
                 },
                 "config": {
                     "auth": {
-                        "url": "https://php-ms-imapuser.ddev.site/rest-imapuser/api/v.*?/auth(/.*)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-imapuser/api/v.*?/auth(/.*)?",
                         "enabled": true,
                         "delay": 250
                     }
@@ -62,27 +74,22 @@
                 },
                 "config": {
                     "attachment": {
-                        "url": "https://php-ms-imapuser.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems/(.+)/Attachments(/.*)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems/(.+)/Attachments(/.*)?",
                         "enabled": true,
                         "delay": 250
                     },
                     "messageItem": {
-                        "url": "https://php-ms-imapuser.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems(/.*)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems(/.*)?",
                         "enabled": true,
                         "delay": 250
                     },
                     "mailFolder": {
-                        "url": "https://php-ms-imapuser.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders(/.*)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders(/.*)?",
                         "enabled": true,
                         "delay": 250
                     },
                     "mailAccount": {
-                        "url": "https://php-ms-imapuser.ddev.site/rest-api-email/api/v.*?/MailAccounts(/d+)?",
-                        "enabled": true,
-                        "delay": 250
-                    },
-                    "sendMessage": {
-                        "url": "https://php-ms-imapuser.ddev.site/rest-api-email/api/v.*?/SendMessage(/d+)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts(/d+)?",
                         "enabled": true,
                         "delay": 250
                     }

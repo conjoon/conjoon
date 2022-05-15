@@ -35,7 +35,7 @@ module.exports = {
         "contentBase": "./build/production/conjoon",
         "compress": false,
         "hot": true,
-        "port": 9000,
+        "port": 9001,
         "publicPath": "/"
     }
 };
