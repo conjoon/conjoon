@@ -24,31 +24,18 @@
  */
 
 export default [{
-    group: "classic",
+    group: "conjoon",
     items: [{
-        group: "conjoon",
+        name: "Application",
+        url: "shared/src/ApplicationTest.js"
+    }, {
+        group: "plugin",
         items: [{
-            group: "plugin",
-            items: [{
-                name: "WorkbenchQuotes",
-                url: "desktop/src/plugin/WorkbenchQuotesTest.js"
-            }]
-
-        }]
-    }]
-}, {
-    group: "universal",
-    items: [{
-        group: "conjoon",
-        items: [{
-            name: "Application",
-            url: "shared/src/ApplicationTest.js"
+            name: "TitleChangePlugin",
+            url: "shared/src/plugin/TitleChangePluginTest.js"
         }, {
-            group: "plugin",
-            items: [{
-                name: "TitleChangePlugin",
-                url: "shared/src/plugin/TitleChangePluginTest.js"
-            }]
+            name: "WorkbenchQuotes",
+            url: "desktop/src/plugin/WorkbenchQuotesTest.js"
         }]
     }]
 }];

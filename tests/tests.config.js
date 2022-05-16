@@ -43,12 +43,10 @@ export default {
         "conjoon.Application": "../app/shared/src/Application.js",
         "conjoon.plugin.TitleChangePlugin": "../app/shared/src/plugin/TitleChangePlugin.js",
 
-
         /**
          * Classic
          */
         "conjoon": "../app/desktop/src",
-
 
         /**
          * Requirements
@@ -61,9 +59,7 @@ export default {
         "coon.navport.view.NavigationToolbar": "../node_modules/@coon-js/extjs-comp-navport/classic/src/view/NavigationToolbar.js",
         "coon.navport.view.NavigationViewport": "../node_modules/@coon-js/extjs-comp-navport/classic/src/view/NavigationViewport.js",
         "coon.comp.container.Viewport": "../node_modules/@coon-js/extjs-lib-comp/classic/src/container/Viewport.js"
-
     },
-
     preload: {
         js: "../node_modules/@l8js/l8/dist/l8.runtime.umd.js"
     }
