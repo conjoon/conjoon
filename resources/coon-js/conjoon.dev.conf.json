@@ -58,7 +58,7 @@
             },
             "extjs-dev-imapusersim": {
                 "autoLoad": {
-                    "registerController": false
+                    "registerController": true
                 },
                 "config": {
                     "auth": {
@@ -70,7 +70,7 @@
             },
             "extjs-dev-webmailsim": {
                 "autoLoad": {
-                    "registerController": false
+                    "registerController": true
                 },
                 "config": {
                     "attachment": {
@@ -97,7 +97,7 @@
             },
             "extjs-ctrl-simmanager": {
                 "autoLoad": {
-                    "registerController": false
+                    "registerController": true
                 }
             }
         }
