@@ -101,9 +101,6 @@
         "uses": [
             "extjs-app-imapuser",
             "extjs-app-webmail",
-            "extjs-dev-imapusersim",
-            "extjs-dev-webmailsim",
-            "extjs-ctrl-simmanager",
             "extjs-plug-themeutil"
         ],
         "js": [
