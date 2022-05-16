@@ -48,7 +48,7 @@
     "@coon-js/extjs-app-user": "^0.1.7",
     "@coon-js/extjs-comp-navport": "^0.2.4",
     "@coon-js/extjs-lib-comp": "^0.2.8",
-    "@coon-js/extjs-lib-core": "^0.8.1",
+    "@coon-js/extjs-lib-core": "^0.8.2",
     "@coon-js/extjs-plug-themeutil": "^0.1.3",
     "@l8js/l8": "^0.7.2",
     "@sencha/ext": "^7.4.0",
