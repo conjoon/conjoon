@@ -12,17 +12,22 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-      - uses: actions/checkout@v2
-      - name: npm (Node.js ${{ matrix.node-version }})
+
+      - name: Checking out project
+        uses: actions/checkout@v2
+
+      - name: Installing Node ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: npm ci
+
+      - name: Installing dependencies via NPM
         run: |
           npm config set @sencha:registry https://npm.sencha.com/
           npm config set //npm.sencha.com/:_authToken=${{ secrets.SENCHA_ACCESS_TOKEN }}
           npm ci --save-dev
+
       - name: Build Ext JS & zip build
         run: |
           npm run build
@@ -48,4 +53,3 @@ jobs:
           asset_path: ./release.zip
           asset_name: conjoon.build.${{ github.ref }}.zip
           asset_content_type: application/zip
-          
