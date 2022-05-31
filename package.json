@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@conjoon/extjs-app-imapuser": "^0.1.2",
-    "@conjoon/extjs-app-webmail": "../extjs-app-webmail",
+    "@conjoon/extjs-app-webmail": "^0.2.0",
     "@conjoon/extjs-theme-material": "^0.2.1",
     "@coon-js/extjs-app-user": "^0.1.7",
     "@coon-js/extjs-comp-navport": "^0.2.4",
@@ -60,7 +60,7 @@
     "@coon-js/siesta-lib-helper": "^0.1.16",
     "@coon-js/extjs-ctrl-simmanager": "^0.2.4",
     "@conjoon/extjs-dev-imapusersim": "^1.0.4",
-    "@conjoon/extjs-dev-webmailsim": "../extjs-dev-webmailsim",
+    "@conjoon/extjs-dev-webmailsim": "^0.1.1",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
