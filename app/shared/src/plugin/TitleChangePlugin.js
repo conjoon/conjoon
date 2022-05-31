@@ -24,22 +24,9 @@
  */
 
 /**
- * ApplicationPlugin for registering a {coon.core.Theme} with the {coon.core.ThemeManager}
- * to make it generally available to an application.
- * Reads out configuration from the {coon.core.ConfigManager} for the theme's package and
- * applies its "modes"-value (if config available) to the theme.
- * 
- * Any theme that inherits from coon.core.Theme that should be considered with this plugin must obey to the following
- * conventions:
- * - Theme's information must be available for querying the environment using coon.core.Environment.get("theme.is.coon-js-theme"),
- *   which should return "true" to make sure this plugin can consume further theme information.
- *   coon.core.Environment.get("theme.name") should return the name of the theme's package.
- *   These settings are usually configured in a file called init.js, placed in the overrides-folder
- *   of the theme-package.
- * - The theme's class-name must be build as follows: "package_namespace.Theme", e.g. if the
- *   package's namespace is "acme.theme.colorTheme", the fqn of the theme-class extending {coon.core.Theme}
- *   must be "acme.theme.colorTheme.Theme"
- * - The theme's class must have been made available in the Application when this plugin tries to access it
+ * ApplicationPlugin for changing the title based on the information sent with the global
+ * "conjoon.application.TitleAvailable"-event and the "titleTpl" found in the configuration
+ * of the application.
  */
 Ext.define("conjoon.plugin.TitleChangePlugin", {
 
