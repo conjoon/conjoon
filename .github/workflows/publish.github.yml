@@ -14,6 +14,12 @@ jobs:
       packages: write 
     steps:
       - uses: actions/checkout@v2
+      - name: Building dist
+        run: |
+          npm config set @sencha:registry https://npm.sencha.com/
+          npm config set //npm.sencha.com/:_authToken=${{ secrets.SENCHA_ACCESS_TOKEN }}
+          npm ci --save-dev
+          npm run build
       - uses: actions/setup-node@v2
         with:
           node-version: 16
