@@ -60,7 +60,7 @@
     "@coon-js/siesta-lib-helper": "^0.1.16",
     "@coon-js/extjs-ctrl-simmanager": "^0.2.4",
     "@conjoon/extjs-dev-imapusersim": "^1.0.4",
-    "@conjoon/extjs-dev-webmailsim": "^0.1.1",
+    "@conjoon/extjs-dev-webmailsim": "^0.1.3",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
