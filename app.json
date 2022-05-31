@@ -96,14 +96,11 @@
     "production": {
         "coon-js": {
             "env": "prod",
-            "resources": "coon-js"
+            "resourcePath": "coon-js"
         },
         "uses": [
             "extjs-app-imapuser",
             "extjs-app-webmail",
-            "extjs-dev-imapusersim",
-            "extjs-dev-webmailsim",
-            "extjs-ctrl-simmanager",
             "extjs-plug-themeutil"
         ],
         "js": [
@@ -158,7 +155,7 @@
     "development": {
         "coon-js": {
             "env": "dev",
-            "resources": "coon-js"
+            "resourcePath": "coon-js"
         },
         "uses": [
             "extjs-app-imapuser",

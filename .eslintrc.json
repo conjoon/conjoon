@@ -28,6 +28,7 @@
         "webpack.config.js",
         "webpack.prod.config.js",
         "**/build/*",
+        "**/buildtest/*",
         "**/packages/remote/*"
     ],
     "rules": {

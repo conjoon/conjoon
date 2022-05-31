@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2017-2021 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -23,19 +23,9 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
 /**
- * Module export for starting webpack dev server with production build.
- *
- * @type {{devServer: {compress: boolean, port: number, hot: boolean, publicPath: string, open: boolean, contentBase: string}, entry: string}}
+ * Require additional classes to make sure their source is in the build.
  */
-module.exports = {
-    entry: "./index.js",
-    devServer: {
-        "contentBase": "./build/production/conjoon",
-        "compress": false,
-        "hot": true,
-        "port": 9001,
-        "publicPath": "/"
-    }
-};
+Ext.require("conjoon.plugin.WorkbenchQuotes");
+
+Ext.require("coon.core.service.*");

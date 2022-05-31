@@ -1,4 +1,5 @@
-/build
+/build/development
+/build/temp
 /generatedFiles
 /cordova
 /node_modules

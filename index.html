@@ -2,7 +2,7 @@
 /**
 * conjoon
 * conjoon
-* Copyright (C) 2017-2021 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+* Copyright (C) 2017-2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
 *
 * Permission is hereby granted, free of charge, to any person
 * obtaining a copy of this software and associated documentation
@@ -30,7 +30,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
-	<title>conjoon</title>
+	<title>Loading...</title>
 
   <style type="text/css">
 
@@ -57,10 +57,7 @@
   <script type="text/javascript">
     var Ext = Ext || {};
     Ext.beforeLoad = function (tags) {
-      //var s = location.search;
-      var profile;
-      profile = 'desktop';
-      Ext.manifest ='generatedFiles/' + profile;
+      Ext.manifest ='generatedFiles/desktop';
     };
   </script>
 

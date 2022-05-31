@@ -48,51 +48,52 @@
                     "registerController": true
                 },
                 "config": {
-                    "title": "Email",
-                    "plugins": {
-                        "components": [
-                            {
-                                "cmp": "cn_mail-mailmessagegrid",
-                                "fclass": "conjoon.cn_mail.view.mail.message.grid.feature.PreviewTextLazyLoad",
-                                "event": "cn_init"
-                            }
-                        ],
-                        "controller": [
-                            {
-                                "xclass": "conjoon.cn_mail.app.plugin.NewMessagesNotificationPlugin",
-                                "args": [
-                                    {
-                                        "interval": 240000
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "resources": {
-                        "images": {
-                            "notifications": {
-                                "newEmail": "resources/images/notification/newmail.png"
-                            }
-                        },
-                        "sounds": {
-                            "notifications": {
-                                "newEmail": "resources/sounds/notification/newmail.wav"
-                            }
-                        },
-                        "templates": {
-                            "html": {
-                                "editor": "resources/templates/html/editor.html.tpl",
-                                "reader": "resources/templates/html/reader.html.tpl"
-                            }
+                "title": "Email",
+                "plugins": {
+                    "components": [
+                        {
+                            "cmp": "cn_mail-mailmessagegrid",
+                            "fclass": "conjoon.cn_mail.view.mail.message.grid.feature.PreviewTextLazyLoad",
+                            "event": "cn_init"
+                        }
+                    ],
+                    "controller": [
+                        {
+                            "xclass": "conjoon.cn_mail.app.plugin.NewMessagesNotificationPlugin",
+                            "args": [
+                                {
+                                    "interval": 240000
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "resources": {
+                    "images": {
+                        "notifications": {
+                            "newEmail": "resources/images/notification/newmail.png"
                         }
                     },
-                    "service": {
-                        "rest-api-email": {
-                            "base": "https://ddev-ms-email.ddev.site/rest-api-email/api/v0/"
+                    "sounds": {
+                        "notifications": {
+                            "newEmail": "resources/sounds/notification/newmail.wav"
+                        }
+                    },
+                    "templates": {
+                        "html": {
+                            "editor": "resources/templates/html/editor.html.tpl",
+                            "reader": "resources/templates/html/reader.html.tpl"
                         }
                     }
+                },
+                "service": {
+                    "rest-api-email": {
+                        "base": "https://ddev-ms-email.ddev.site/rest-api-email/api/v0/"
+                    }
                 }
-            },
+            }
+            }
+        ,
             "extjs-app-imapuser": {
                 "autoLoad": {
                     "registerController": true

@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2017-2021 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -23,19 +23,19 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
-/**
- * Module export for starting webpack dev server with production build.
- *
- * @type {{devServer: {compress: boolean, port: number, hot: boolean, publicPath: string, open: boolean, contentBase: string}, entry: string}}
- */
-module.exports = {
-    entry: "./index.js",
-    devServer: {
-        "contentBase": "./build/production/conjoon",
-        "compress": false,
-        "hot": true,
-        "port": 9001,
-        "publicPath": "/"
-    }
-};
+export default [{
+    group: "conjoon",
+    items: [{
+        name: "Application",
+        url: "shared/src/ApplicationTest.js"
+    }, {
+        group: "plugin",
+        items: [{
+            name: "TitleChangePlugin",
+            url: "shared/src/plugin/TitleChangePluginTest.js"
+        }, {
+            name: "WorkbenchQuotes",
+            url: "desktop/src/plugin/WorkbenchQuotesTest.js"
+        }]
+    }]
+}];

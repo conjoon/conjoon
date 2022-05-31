@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2017-2021 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2017-2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -33,7 +33,11 @@ Ext.define("conjoon.Application", {
     extend: "coon.comp.app.Application",
 
     requires: [
-        "conjoon.view.main.Viewport"
+        // @define l8
+        "l8",
+        "conjoon.view.main.Viewport",
+        "coon.core.ConfigManager",
+        "coon.comp.component.AnnouncementBar"
     ],
 
     controllers: [
@@ -44,6 +48,40 @@ Ext.define("conjoon.Application", {
 
     mainView: "conjoon.view.main.Viewport",
 
+
+    /**
+     * launches the app.
+     */
+    launch () {
+
+        Ext.fireEvent(
+            "conjoon.application.TitleAvailable",
+            this,
+            coon.core.ConfigManager.get("conjoon", "tagline")
+        );
+
+        if (!["denied", "granted"].includes(Notification.permission)) {
+            coon.Announcement.show({
+                "message": "Would you like to receive desktop notifications from conjoon?",
+                "yes": {text: "Options...", callback: () => Notification.requestPermission()},
+                "type": "info"
+            });
+        }
+
+        const announcement = coon.core.ConfigManager.get("conjoon", "announcement");
+        if (announcement) {
+            coon.Announcement.show({
+                "message": announcement.message,
+                "type": "success"
+            });
+        }
+    },
+
+
+    /**
+     *
+     * @returns {*}
+     */
     launchHook: function () {
         Ext.getBody().removeCls("launching");
 
@@ -57,14 +95,18 @@ Ext.define("conjoon.Application", {
         return this.callParent(arguments);
     },
 
-    onAppUpdate: function () {
 
-        Ext.Msg.confirm("Application Update", "This application has an update, reload?",
-            function (choice) {
-                if (choice === "yes") {
-                    window.location.reload();
-                }
-            }
-        );
+    /**
+     * Callback for an application update detected by this application.
+     */
+    onAppUpdate () {
+        "use strict";
+
+        coon.Announcement.show({
+            "message": "This application has an update, reload?",
+            "yes": () => window.location.reload(),
+            "no": bar => bar.hide(),
+            "type": "warning"
+        });
     }
 });
