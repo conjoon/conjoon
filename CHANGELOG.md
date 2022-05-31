@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/conjoon/conjoon/compare/v0.3.2...v0.3.3) (2022-05-31)
+
+
+### Bug Fixes
+
+* **build:** fix dependency mess w/ lockfile ([7e33fd4](https://github.com/conjoon/conjoon/commit/7e33fd4fdea395c6cef90cf0099b87d82e268ae6))
+
 ### [0.3.2](https://github.com/conjoon/conjoon/compare/v0.3.1...v0.3.2) (2022-05-31)
 
 
