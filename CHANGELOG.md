@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/conjoon/conjoon/compare/v0.3.1...v0.3.2) (2022-05-31)
+
+
+### Bug Fixes
+
+* **build:** fix dependency mess ([b0299aa](https://github.com/conjoon/conjoon/commit/b0299aaf705ff2c0795454f3ca605ed1626325b3))
+
 ### [0.3.1](https://github.com/conjoon/conjoon/compare/v0.3.0...v0.3.1) (2022-05-31)
 
 
