@@ -29,10 +29,10 @@
     "clean": "rimraf build",
     "dev": "webpack-dev-server --env.profile=desktop --env.browser=yes --env.verbose=no --env.cmdopts=--uses",
     "build": "npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes --env.cmdopts=--uses",
-    "preview": "webpack-dev-server --config ./webpack.prod.config.js --open",
+    "stage": "webpack-dev-server --config ./webpack.prod.config.js --open",
     "build:dev": "npm run build:test && npx node-git-hooks",
     "build:test": "npm i --save-dev && npx extjs-link && npx siesta-lib-helper",
-    "build:preview": "npm run build && npm run preview",
+    "build:staging": "npm run build && npm run stage",
     "build:testing": "npm run clean && cross-env webpack --env.profile=desktop --env.treeshake=yes --env.cmdopts=--testing",
     "test": "npx ws --port 8099 --static.index tests.redirect.html --open",
     "postversion": "git push && git push --tags",
@@ -41,9 +41,9 @@
     "release:minor": "standard-version --release-as minor && npm run postversion",
     "release:major": "standard-version --release-as major && npm run postversion"
   },
-  "dependencies": {
+  "devDependencies": {
     "@conjoon/extjs-app-imapuser": "^0.1.2",
-    "@conjoon/extjs-app-webmail": "^0.2.0",
+    "@conjoon/extjs-app-webmail": "../extjs-app-webmail",
     "@conjoon/extjs-theme-material": "^0.2.1",
     "@coon-js/extjs-app-user": "^0.1.7",
     "@coon-js/extjs-comp-navport": "^0.2.4",
@@ -54,15 +54,13 @@
     "@sencha/ext": "^7.4.0",
     "@sencha/ext-classic": "^7.4.0",
     "@sencha/ext-classic-theme-material": "^7.4.0",
-    "@sencha/ext-ux": "^7.4.0"
-  },
-  "devDependencies": {
+    "@sencha/ext-ux": "^7.4.0",
     "@coon-js/extjs-link": "^0.1.10",
     "@coon-js/extjs-package-loader": "^0.1.10",
     "@coon-js/siesta-lib-helper": "^0.1.16",
     "@coon-js/extjs-ctrl-simmanager": "^0.2.4",
     "@conjoon/extjs-dev-imapusersim": "^1.0.4",
-    "@conjoon/extjs-dev-webmailsim": "^0.1.1",
+    "@conjoon/extjs-dev-webmailsim": "../extjs-dev-webmailsim",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
