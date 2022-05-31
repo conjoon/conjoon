@@ -33,10 +33,122 @@
             ]
         },
         "application": {
-            "title": "conjoon demo",
+            "title": "conjoon",
+            "tagline": "webmail made easy",
+            "titleTpl": "${title} | conjoon",
             "announcement": {
                 "message": "Thank you for using conjoon. Leave a ⭐ at <a target=\"_blank\" href=\"https://github.com/conjoon/conjoon\">Github</a> if you like it!",
                 "type": "success"
+            }
+        },
+        "packages": {
+
+            "extjs-app-webmail": {
+                "autoLoad": {
+                    "registerController": true
+                },
+                "config": {
+                    "title": "Email",
+                    "plugins": {
+                        "components": [
+                            {
+                                "cmp": "cn_mail-mailmessagegrid",
+                                "fclass": "conjoon.cn_mail.view.mail.message.grid.feature.PreviewTextLazyLoad",
+                                "event": "cn_init"
+                            }
+                        ],
+                        "controller": [
+                            {
+                                "xclass": "conjoon.cn_mail.app.plugin.NewMessagesNotificationPlugin",
+                                "args": [
+                                    {
+                                        "interval": 240000
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "resources": {
+                        "images": {
+                            "notifications": {
+                                "newEmail": "resources/images/notification/newmail.png"
+                            }
+                        },
+                        "sounds": {
+                            "notifications": {
+                                "newEmail": "resources/sounds/notification/newmail.wav"
+                            }
+                        },
+                        "templates": {
+                            "html": {
+                                "editor": "resources/templates/html/editor.html.tpl",
+                                "reader": "resources/templates/html/reader.html.tpl"
+                            }
+                        }
+                    },
+                    "service": {
+                        "rest-api-email": {
+                            "base": "https://ddev-ms-email.ddev.site/rest-api-email/api/v0/"
+                        }
+                    }
+                }
+            },
+            "extjs-app-imapuser": {
+                "autoLoad": {
+                    "registerController": true
+                },
+                "config": {
+                    "title": "Login",
+                    "service": {
+                        "rest-imapuser": {
+                            "base": "https://ddev-ms-email.ddev.site/rest-imapuser/api/v0"
+                        }
+                    }
+                }
+            },
+            "extjs-dev-imapusersim": {
+                "autoLoad": {
+                    "registerController": true
+                },
+                "config": {
+                    "auth": {
+                        "url": "https://ddev-ms-email.ddev.site/rest-imapuser/api/v.*?/auth(/.*)?",
+                        "enabled": true,
+                        "delay": 250
+                    }
+                }
+            },
+            "extjs-dev-webmailsim": {
+                "autoLoad": {
+                    "registerController": true
+                },
+                "config": {
+                    "attachment": {
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems/(.+)/Attachments(/.*)?",
+                        "enabled": true,
+                        "delay": 250
+                    },
+                    "messageItem": {
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems(/.*)?",
+                        "enabled": true,
+                        "delay": 250
+                    },
+                    "mailFolder": {
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders(/.*)?",
+                        "enabled": true,
+                        "delay": 250
+                    },
+                    "mailAccount": {
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts(/d+)?",
+                        "enabled": true,
+                        "delay": 250
+                    }
+                }
+            },
+            "extjs-ctrl-simmanager": {
+                "autoLoad": {
+                    "registerController": true
+                }
             }
         }
     }
