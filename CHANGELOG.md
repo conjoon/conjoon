@@ -4,20 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.0-beta.0](https://github.com/conjoon/conjoon/compare/v1.0.0...v1.0.0-beta.0) (2022-06-01)
 
-## [1.0.0](https://github.com/conjoon/conjoon/compare/v0.9.1-beta.3...v1.0.0) (2022-06-01)
-
-### [0.9.1-beta.3](https://github.com/conjoon/conjoon/compare/v0.9.1-beta.2...v0.9.1-beta.3) (2022-06-01)
-
-### [0.9.1-beta.2](https://github.com/conjoon/conjoon/compare/v0.3.5...v0.9.1-beta.2) (2022-06-01)
-
-### [0.9.1-beta.1](https://github.com/conjoon/conjoon/compare/v0.3.5...v0.9.1-beta.1) (2022-06-01)
-
-### [0.9.1-beta.0](https://github.com/conjoon/conjoon/compare/v0.3.5...v0.9.1-beta.0) (2022-06-01)
-
-### [1.0.1-beta.0](https://github.com/conjoon/conjoon/compare/v0.3.5...v1.0.1-beta.0) (2022-06-01)
-
-### [0.3.6](https://github.com/conjoon/conjoon/compare/v0.3.5...v0.3.6) (2022-06-01)
-
 ### [0.3.5](https://github.com/conjoon/conjoon/compare/v0.3.4...v0.3.5) (2022-05-31)
 
 ### [0.3.4](https://github.com/conjoon/conjoon/compare/v0.3.3...v0.3.4) (2022-05-31)
