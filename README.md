@@ -50,20 +50,6 @@ IMAP / SMTP protocol implementations for **all relevant** email operations
 
 [REST API documentation](/docs/rest-api/overview) available as OpenAPI documentation
 
-
-<p align="center">
-
-<b>Tested</b> with the most <b>popular free email services</b>
-<br /><br />
-<img src="http://www.conjoon.org/img/logos/gmail.svg" alt="AOL" style="width:80px;margin:0 40px 0 0" />
-<img src="http://www.conjoon.org/img/logos/outlook.svg" alt="outlook.com"  style="width:80px;margin:0 40px 0 0"  />
-<img src="http://www.conjoon.org/img/logos/aol.svg" alt="aol.com"  style="width:80px;margin:0 40px 0 0"  />
-<img src="http://www.conjoon.org/img/logos/yahoomail.svg" alt="yahoo.com"  style="width:80px;margin:0 40px 0 0"  />
-<img src="http://www.conjoon.org/img/logos/freenet.svg" alt="freenet.de" style="width:80px;margin:0 40px 0 0"  />
-<img src="http://www.conjoon.org/img/logos/gmx.svg" alt="gmx.net" style="width:80px;margin:0 40px 0 0"  />
-<img src="http://www.conjoon.org/img/logos/webde.svg" alt="web.de"  style="width:80px;margin:0 40px 0 0"  />
-</p>
-
 **conjoon** is released under the [MIT license](https://github.com/conjoon/conjoon/blob/main/LICENSE.txt).
 
 
@@ -71,9 +57,7 @@ IMAP / SMTP protocol implementations for **all relevant** email operations
 
 Please see the [documentation](https://conjoon.org/docs) at [conjoon.org](https://conjoon.org).
 
-## Available backends for Production
-
-### lumen-app-email
+### Available backends for Production
   * [lumen-app-email](https://github.com/conjoon/lumen-app-email) <br />
 **lumen-app-email** is a microservice that provides a [Lumen/ddev](https://lumen.laravel.com) application with access
     to the [rest-imap/rest-imapuser](https://github.com/conjoon/rest-api-description) API for IMAP servers. It can
