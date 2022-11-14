@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/conjoon/conjoon/compare/v1.0.0-beta.2...v1.0.0) (2022-11-14)
+
+
+### Features
+
+* add MailtoProtocolHandlerPlugin for handling mailto links ([a111348](https://github.com/conjoon/conjoon/commit/a1113483bd7e880e3d81a95b8dfb95e3d20d6ed2)), closes [conjoon/extjs-app-webmail#250](https://github.com/conjoon/extjs-app-webmail/issues/250)
+
 ## [1.0.0-beta.2](https://github.com/conjoon/conjoon/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-06-01)
 
 
