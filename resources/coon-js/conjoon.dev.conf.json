@@ -59,6 +59,9 @@
                     ],
                     "controller": [
                         {
+                            "xclass": "conjoon.cn_mail.app.plugin.MailtoProtocolHandlerPlugin"
+                        },
+                        {
                             "xclass": "conjoon.cn_mail.app.plugin.NewMessagesNotificationPlugin",
                             "args": [
                                 {
@@ -130,7 +133,7 @@
                         "delay": 250
                     },
                     "messageItem": {
-                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems(/.*)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/api/v.*?/MailAccounts/(.+)/MailFolders/(.+)/Message(Items|Bodies)(/.*)?",
                         "enabled": true,
                         "delay": 250
                     },
