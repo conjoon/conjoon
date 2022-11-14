@@ -61,8 +61,9 @@ Ext.define("conjoon.Application", {
         );
 
         if (!["denied", "granted"].includes(Notification.permission)) {
+            const title = coon.core.ConfigManager.get("conjoon", "title") || "conjoon";
             coon.Announcement.show({
-                "message": "Would you like to receive desktop notifications from conjoon?",
+                "message": `Would you like to receive desktop notifications from ${title}?`,
                 "yes": {text: "Options...", callback: () => Notification.requestPermission()},
                 "type": "info"
             });
@@ -70,10 +71,7 @@ Ext.define("conjoon.Application", {
 
         const announcement = coon.core.ConfigManager.get("conjoon", "announcement");
         if (announcement) {
-            coon.Announcement.show({
-                "message": announcement.message,
-                "type": "success"
-            });
+            coon.Announcement.show(announcement);
         }
     },
 
