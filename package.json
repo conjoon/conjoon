@@ -51,7 +51,7 @@
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
     "@conjoon/extjs-app-imapuser": "^0.1.2",
-    "@conjoon/extjs-app-webmail": "^0.3.0",
+    "@conjoon/extjs-app-webmail": "^0.3.1",
     "@conjoon/extjs-dev-imapusersim": "^1.0.4",
     "@conjoon/extjs-dev-webmailsim": "^0.1.4",
     "@conjoon/extjs-theme-material": "^0.2.3",
