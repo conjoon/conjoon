@@ -65,7 +65,7 @@
     "@coon-js/extjs-plug-themeutil": "^0.1.3",
     "@coon-js/siesta-lib-helper": "^0.1.16",
     "@l8js/l8": "^0.7.2",
-    "@sencha/cmd": "^7.4.45",
+    "@sencha/cmd": "^7.5.1",
     "@sencha/ext": "^7.4.0",
     "@sencha/ext-classic": "^7.4.0",
     "@sencha/ext-classic-theme-material": "^7.4.0",
