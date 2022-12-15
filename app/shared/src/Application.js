@@ -37,7 +37,8 @@ Ext.define("conjoon.Application", {
         "l8",
         "conjoon.view.main.Viewport",
         "coon.core.ConfigManager",
-        "coon.comp.component.AnnouncementBar"
+        "coon.comp.component.AnnouncementBar",
+        "Ext.util.Cookies"
     ],
 
     controllers: [
