@@ -48,61 +48,70 @@
                     "registerController": true
                 },
                 "config": {
-                "title": "Email",
-                "plugins": {
-                    "components": [
-                        {
-                            "cmp": "cn_mail-mailmessagegrid",
-                            "fclass": "conjoon.cn_mail.view.mail.message.grid.feature.PreviewTextLazyLoad",
-                            "event": "cn_init"
-                        }
-                    ],
-                    "controller": [
-                        {
-                            "xclass": "conjoon.cn_mail.app.plugin.MailtoProtocolHandlerPlugin"
+                    "title": "Email",
+                    "plugins": {
+                        "components": [
+                            {
+                                "cmp": "cn_mail-mailmessagegrid",
+                                "fclass": "conjoon.cn_mail.view.mail.message.grid.feature.PreviewTextLazyLoad",
+                                "event": "cn_init"
+                            }
+                        ],
+                        "controller": [
+                            {
+                                "xclass": "conjoon.cn_mail.app.plugin.MailtoProtocolHandlerPlugin"
+                            },
+                            {
+                                "xclass": "conjoon.cn_mail.app.plugin.NewMessagesNotificationPlugin",
+                                "args": [
+                                    {
+                                        "interval": 240000
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "resources": {
+                        "images": {
+                            "notifications": {
+                                "newEmail": "resources/images/notification/newmail.png"
+                            }
                         },
-                        {
-                            "xclass": "conjoon.cn_mail.app.plugin.NewMessagesNotificationPlugin",
-                            "args": [
-                                {
-                                    "interval": 240000
-                                }
-                            ]
-                        }
-                    ]
-                },
-                "resources": {
-                    "images": {
-                        "notifications": {
-                            "newEmail": "resources/images/notification/newmail.png"
+                        "sounds": {
+                            "notifications": {
+                                "newEmail": "resources/sounds/notification/newmail.wav"
+                            }
+                        },
+                        "templates": {
+                            "html": {
+                                "editor": "resources/templates/html/editor.html.tpl",
+                                "reader": "resources/templates/html/reader.html.tpl"
+                            }
                         }
                     },
-                    "sounds": {
-                        "notifications": {
-                            "newEmail": "resources/sounds/notification/newmail.wav"
+                    "service": {
+                        "rest-api-email": {
+                            "base": "https://ddev-ms-email.ddev.site/rest-api-email/v0/"
                         }
-                    },
-                    "templates": {
-                        "html": {
-                            "editor": "resources/templates/html/editor.html.tpl",
-                            "reader": "resources/templates/html/reader.html.tpl"
-                        }
-                    }
-                },
-                "service": {
-                    "rest-api-email": {
-                        "base": "https://ddev-ms-email.ddev.site/rest-api-email/v0/"
                     }
                 }
-            }
-            }
-        ,
+            },
             "extjs-app-imapuser": {
                 "autoLoad": {
                     "registerController": true
                 },
                 "config": {
                     "title": "Login",
+                    "ioc": {
+                        "bindings": {
+                            "conjoon.dev.cn_mailsim": {
+                                "conjoon.dev.cn_mailsim.data.SimletAdapter": "conjoon.cn_imapuser.dev.BasicAuthSimletAdapter"
+                            },
+                            "conjoon.cn_mail": {
+                                "coon.core.data.request.Configurator": "conjoon.cn_imapuser.data.request.Configurator"
+                            }
+                        }
+                    },
                     "service": {
                         "rest-imapuser": {
                             "base": "https://ddev-ms-email.ddev.site/rest-imapuser/v0"
@@ -133,7 +142,7 @@
                         "delay": 250
                     },
                     "messageItem": {
-                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/v.*?/MailAccounts/(.+)/MailFolders/(.+)/Message(Items|Bodies)(/.*)?",
+                        "url": "https://ddev-ms-email.ddev.site/rest-api-email/v.*?/MailAccounts/(.+)/MailFolders/(.+)/MessageItems(/.*)?",
                         "enabled": true,
                         "delay": 250
                     },

@@ -72,8 +72,7 @@
             "enable": false
         }
     },
-    "js": [
-    ],
+    "js": [],
     "classic": {
         "js": []
     },
@@ -96,7 +95,7 @@
     "production": {
         "coon-js": {
             "env": "prod",
-            "resourcePath": "coon-js"
+            "resourcePath": "."
         },
         "uses": [
             "extjs-app-imapuser",
@@ -158,7 +157,7 @@
     "development": {
         "coon-js": {
             "env": "dev",
-            "resourcePath": "coon-js"
+            "resourcePath": "."
         },
         "uses": [
             "extjs-app-imapuser",
