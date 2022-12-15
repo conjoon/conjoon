@@ -1,0 +1,20 @@
+{
+    "map" : [
+      "classpath",
+      "overrides"
+    ],
+    "toolkits": [
+      "modern", "classic"
+    ],
+    "builds": [
+      "desktop", "shared"
+    ],
+    "externals": [
+      "../extjs-app-imapuser",
+      "../extjs-app-webmail",
+      "../extjs-dev-imapusersim",
+      "../extjs-dev-webmailsim",
+      "../extjs-theme-material",
+      "../../@coon-js/extjs-lib-core"
+    ]
+}
