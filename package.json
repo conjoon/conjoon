@@ -77,7 +77,7 @@
     "uninstall": "^0.0.0",
     "webpack": "~4.39.2",
     "webpack-cli": "~3.3.6",
-    "webpack-dev-server": "~3.8.0"
+    "webpack-dev-server": "~3.11.3"
   },
   "dependencies": {
     "@conjoon/extjs-app-imapuser": "^0.2.4",
