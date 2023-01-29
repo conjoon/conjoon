@@ -10,6 +10,7 @@
       "desktop", "shared"
     ],
     "externals": [
+      "./node_modules/@conjoon/extjs-app-localmailaccount",
       "./node_modules/@conjoon/extjs-app-imapuser",
       "./node_modules/@conjoon/extjs-app-webmail",
       "./node_modules/@conjoon/extjs-dev-imapusersim",

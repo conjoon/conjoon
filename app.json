@@ -98,6 +98,7 @@
             "resourcePath": "."
         },
         "uses": [
+            "extjs-app-localmailaccount",
             "extjs-app-imapuser",
             "extjs-app-webmail",
             "extjs-dev-imapusersim",
@@ -161,6 +162,7 @@
         },
         "uses": [
             "extjs-app-imapuser",
+            "extjs-app-localmailaccount",
             "extjs-app-webmail",
             "extjs-dev-imapusersim",
             "extjs-dev-webmailsim",
