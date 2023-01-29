@@ -80,17 +80,18 @@
     "webpack-dev-server": "~4.11.1"
   },
   "dependencies": {
-    "@conjoon/extjs-app-imapuser": "^0.2.4",
-    "@conjoon/extjs-app-webmail": "^0.4.0",
+    "@conjoon/extjs-app-imapuser": "^1.0.0",
+    "@conjoon/extjs-app-localmailaccount": "^1.0.0",
+    "@conjoon/extjs-app-webmail": "^1.0.1",
     "@conjoon/extjs-dev-imapusersim": "^1.0.5",
-    "@conjoon/extjs-dev-webmailsim": "^0.1.6",
+    "@conjoon/extjs-dev-webmailsim": "^1.0.1",
     "@conjoon/extjs-theme-material": "^0.3.1",
     "@coon-js/extjs-app-user": "^0.1.7",
     "@coon-js/extjs-comp-navport": "^0.2.4",
     "@coon-js/extjs-ctrl-simmanager": "^0.2.4",
     "@coon-js/extjs-lib-comp": "^0.3.0",
-    "@coon-js/extjs-lib-core": "^1.0.2",
-    "@l8js/l8": "^0.8.0"
+    "@coon-js/extjs-lib-core": "^1.0.5",
+    "@l8js/l8": "^0.9.0"
   },
   "engines": {
     "node": "16.14.2"

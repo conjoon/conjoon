@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2022-2023 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -81,7 +81,8 @@ StartTest(t => {
                 conjoon.Application.prototype.launch();
                 t.expect(announcementSpy.calls.all().length).toBe(1);
                 t.expect(announcementSpy.calls.mostRecent().args[0].message).toBe("test announcement");
-                t.expect(announcementSpy.calls.mostRecent().args[0].type).toBe("success");
+                // @see e733b9ee172c07d72a5862a8202e3543f5d8b5cd
+                t.expect(announcementSpy.calls.mostRecent().args[0].type).toBeUndefined();
 
                 t.expect(configSpy.calls.first().args).toEqual(["conjoon", "tagline"]);
                 t.expect(fireSpy.calls.mostRecent().args).toEqual([

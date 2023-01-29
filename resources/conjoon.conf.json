@@ -8,6 +8,9 @@
                 }]
             }
         },
+        "ioc": {
+            "bindings": {}
+        },
         "plugins": {
             "application": [
                 "extjs-plug-themeutil",
@@ -87,11 +90,35 @@
                                 "editor": "resources/templates/html/editor.html.tpl",
                                 "reader": "resources/templates/html/reader.html.tpl"
                             }
-                        }
+                        },
+                        "mailServerPresets": "resources/mailserverpresets.conf.json"
                     },
                     "service": {
                         "rest-api-email": {
                             "base": "https://ddev-ms-email.ddev.site/rest-api-email/v0/"
+                        }
+                    }
+                }
+            },
+            "extjs-app-localmailaccount": {
+                "disabled": true,
+                "autoLoad": {
+                    "registerController": true
+                },
+                "config": {
+                    "title": "Local Email Accounts",
+                    "interceptUri": "\\/MailAccounts\\/?[^\\/]*$",
+                    "ioc": {
+                        "bindings": {
+                            "conjoon.dev.cn_mailsim": {
+                                "conjoon.dev.cn_mailsim.data.SimletAdapter": "conjoon.localmailaccount.dev.BasicAuthSimletAdapter"
+                            },
+                            "conjoon.cn_mail": {
+                                "coon.core.data.request.Configurator": {
+                                    "xclass": "conjoon.localmailaccount.data.request.Configurator",
+                                    "singleton": true
+                                }
+                            }
                         }
                     }
                 }
