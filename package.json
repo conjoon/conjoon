@@ -28,7 +28,9 @@
     "start": "npm run dev",
     "clean": "rimraf build",
     "dev": "webpack-dev-server --env.profile=desktop --env.browser=yes --env.verbose=no --env.cmdopts=--uses",
-    "build": "npx delorean -p -c ./.deloreanrc.build.json && npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes --env.cmdopts=--uses && npx delorean -r -c ./.deloreanrc.build.json",
+    "preprodbuild": "npx delorean -p -c ./.deloreanrc.build.json",
+    "postprodbuild": "npx delorean -r -c ./.deloreanrc.build.json",
+    "build": "npm run preprodbuild && npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes --env.cmdopts=--uses && npm run postprodbuild",
     "stage": "webpack-dev-server --config ./webpack.prod.config.js --open",
     "build:dev": "npm run build:test && npx node-git-hooks",
     "build:test": "npm i --save-dev && npx extjs-link && npx siesta-lib-helper",
@@ -75,9 +77,9 @@
     "siesta-lite": "^5.5.2",
     "standard-version": "^9.3.1",
     "uninstall": "^0.0.0",
-    "webpack": "~4.39.2",
-    "webpack-cli": "~3.3.6",
-    "webpack-dev-server": "~4.11.1"
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "~3.8.0"
   },
   "dependencies": {
     "@conjoon/extjs-app-imapuser": "^1.0.0",
