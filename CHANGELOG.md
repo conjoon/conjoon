@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.1](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.0...v1.1.0-beta.1) (2023-02-06)
+
+
+### Bug Fixes
+
+* wrong keys for accounts in local storage are created ([084f917](https://github.com/conjoon/conjoon/commit/084f917827ca3ac73b8335fdc39f7e924dd07848)), closes [conjoon/extjs-app-localmailaccount#9](https://github.com/conjoon/extjs-app-localmailaccount/issues/9)
+
 ## [1.1.0-beta.0](https://github.com/conjoon/conjoon/compare/v1.0.4...v1.1.0-beta.0) (2023-02-03)
 
 
