@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.4](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.3...v1.1.0-beta.4) (2023-02-07)
+
+
+### Bug Fixes
+
+* **ci:** add required timeout_minutes for nick-fields/retry@v2 ([6b7a452](https://github.com/conjoon/conjoon/commit/6b7a4524553c3c3eeccd8314ffe107b24839867b))
+
 ## [1.1.0-beta.3](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2023-02-07)
 
 ## [1.1.0-beta.2](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2023-02-07)
