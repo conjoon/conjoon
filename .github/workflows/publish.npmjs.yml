@@ -16,7 +16,7 @@ jobs:
       - uses: nick-fields/retry@v2
         with:
           max_attempts: 10
-          timeout_minutes: 1
+          timeout_minutes: 10
           command: |
             npm config set @sencha:registry https://npm.sencha.com/
             npm config set //npm.sencha.com/:_authToken=${{ secrets.SENCHA_ACCESS_TOKEN }}
