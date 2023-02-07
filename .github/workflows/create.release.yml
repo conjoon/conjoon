@@ -23,10 +23,13 @@ jobs:
           cache: 'npm'
 
       - name: Installing dependencies via NPM
-        run: |
-          npm config set @sencha:registry https://npm.sencha.com/
-          npm config set //npm.sencha.com/:_authToken=${{ secrets.SENCHA_ACCESS_TOKEN }}
-          npm ci --save-dev
+        uses: nick-fields/retry@v2
+        with:
+          max_attempts: 10
+          command: |
+            npm config set @sencha:registry https://npm.sencha.com/
+            npm config set //npm.sencha.com/:_authToken=${{ secrets.SENCHA_ACCESS_TOKEN }}
+            npm ci --save-dev
 
       - name: Build Ext JS & zip build
         run: |
