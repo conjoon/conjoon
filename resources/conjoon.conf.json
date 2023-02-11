@@ -114,6 +114,10 @@
                                 "conjoon.dev.cn_mailsim.data.SimletAdapter": "conjoon.localmailaccount.dev.BasicAuthSimletAdapter"
                             },
                             "conjoon.cn_mail": {
+                                "conjoon.cn_mail.view.mail.account.MailAccountHandler": {
+                                    "xclass": "conjoon.cn_mail.view.mail.account.MailAccountHandler",
+                                    "singleton": true
+                                },
                                 "coon.core.data.request.Configurator": {
                                     "xclass": "conjoon.localmailaccount.data.request.Configurator",
                                     "singleton": true
