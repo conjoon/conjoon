@@ -100,13 +100,22 @@ StartTest(t => {
             t.it("onAppUpdate()", t => {
 
                 let announcementSpy = t.spyOn(coon.Announcement, "show").and.callFake(() => {});
-                conjoon.Application.prototype.onAppUpdate();
-                const args = announcementSpy.calls.mostRecent().args[0];
-                t.expect(args.message).toContain("application has an update");
-                t.expect(args.type).toBe("warning");
 
+                conjoon.Application.prototype.onAppUpdate();
+
+                let args = announcementSpy.calls.mostRecent().args[0];
+                t.expect(args.message).toBe("This application can be updated to a new version, reload?");
+                t.expect(args.type).toBe("warning");
                 t.expect(typeof args.yes).toBe("function");
                 t.expect(typeof args.no).toBe("function");
+
+                Ext.manifest = {
+                    version: "1.1.0-beta.10"
+                };
+                conjoon.Application.prototype.onAppUpdate();
+                args = announcementSpy.calls.mostRecent().args[0];
+                t.expect(args.message).toBe("This application can be updated to 1.1.0-beta.10, reload?");
+
 
                 // yes
                 t.expect("" + args.yes).toBe("() => window.location.reload()");

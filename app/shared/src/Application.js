@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2017-2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2017-2023 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -102,7 +102,7 @@ Ext.define("conjoon.Application", {
         "use strict";
 
         coon.Announcement.show({
-            "message": "This application has an update, reload?",
+            "message": `This application can be updated to ${Ext.manifest?.version || "a new version"}, reload?`,
             "yes": () => window.location.reload(),
             "no": bar => bar.hide(),
             "type": "warning"
