@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.12](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.11...v1.1.0-beta.12) (2023-02-14)
+
 ## [1.1.0-beta.11](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.10...v1.1.0-beta.11) (2023-02-14)
 
 
