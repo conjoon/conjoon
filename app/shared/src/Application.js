@@ -103,7 +103,7 @@ Ext.define("conjoon.Application", {
 
         coon.Announcement.urge({
             "message": `This application can be updated from ${Ext.manifest?.version || "an older version"} ` +
-                       `to ${Ext?.Microloader?.manifest?.content?.version || "a newer version"}, reload?`,
+                       `to ${Ext?.Microloader?.appUpdate?.manifest?.version || "a newer version"}, reload?`,
             "yes": () => window.location.reload(),
             "no": bar => () => {},
             "type": "warning"

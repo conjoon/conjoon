@@ -120,8 +120,8 @@ StartTest(t => {
 
                 const tmpMicro = Ext.Microloader;
                 Ext.Microloader = {
-                    manifest: {
-                        content: {
+                    appUpdate: {
+                        manifest: {
                             version: "1.1.0-beta.14"
                         }
                     }
