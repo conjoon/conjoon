@@ -51,7 +51,7 @@
     },
     "standard-version": {
         "scripts": {
-            "postbump": "npm run update:app.json"
+            "postbump": "npm run update:app.json && git add ./app.json"
         }
     },
     "devDependencies": {
