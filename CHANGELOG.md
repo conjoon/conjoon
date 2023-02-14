@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.11](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.10...v1.1.0-beta.11) (2023-02-14)
+
+
+### Features
+
+* add current version to AnnouncementBar for onAppUpdate() ([93e0d0e](https://github.com/conjoon/conjoon/commit/93e0d0e31ae6a3d6d3d573e2e4cc56da538d0f9c)), closes [conjoon/conjoon#25](https://github.com/conjoon/conjoon/issues/25)
+* show version from app.json in AnnouncementBar in onAppUpdate() ([304cde9](https://github.com/conjoon/conjoon/commit/304cde966f4fcb78ec84f14f0a85762b71722ac1)), closes [conjoon/conjoon#25](https://github.com/conjoon/conjoon/issues/25)
+
 ## [1.1.0-beta.10](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.9...v1.1.0-beta.10) (2023-02-12)
 
 ## [1.1.0-beta.9](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.8...v1.1.0-beta.9) (2023-02-12)
