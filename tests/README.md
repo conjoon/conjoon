@@ -4,25 +4,19 @@ This package uses [Siesta](http://bryntum.com) for Unit-/UI-testing.
 
 ### Configuration
 
-tl;dr
-```
-npm run setup:tests
-npm test
+Start with 
+
+```bash
+npx create-siesta@latest
 ```
 
-Explanation:
+This will create the testing environment and builds the required SDK.
 
-Run
-```
-npm run setup:tests
-```
-in the NPM package. The tool will guide you through the process of symlinking to an existing ExtJS SDK installation
-(build files are required to properly run the tests in a Siesta-Browser environment). Once this is done, boilerplate-html
-files will be copied to the project (to: `./tests.redirect.html` and `./tests/index.extjs-browser.html`).
+For the installation, please refer to the documentation of [**create-siesta**](https://github.com/coon-js/create-sites).
 
-After this was done, run
+Once the environment was configured, run
 ```
-npm test
+npm run test:siesta
 ```
 which will start a lightweight local webserver on **127.0.0.1**/**localhost**. This will also try
 automatically open your system's default web-browser and load the test main-page.

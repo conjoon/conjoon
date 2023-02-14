@@ -8,7 +8,8 @@
 /package.prod.json
 /*.log
 /tests.redirect.html
-/.extjs-link.conf.json
 /buildtest/
 /.deloreanbuild
 /app.json.delorean
+
+.extjs-build

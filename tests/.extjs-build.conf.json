@@ -1,0 +1,16 @@
+{
+    "css": {
+        "modern": "../.extjs-build/modern/themes/triton/triton-all.css",
+        "classic": "../.extjs-build/classic/themes/triton/triton-all.css"
+    },
+    "js": [{
+        "classic": [
+            "../.extjs-build/classic/ext-all-debug.js",
+            "../.extjs-build/packages/ux/classic/ux-debug.js"
+        ],
+        "modern": [
+            "../.extjs-build/modern/ext-modern-all-debug.js",
+            "../.extjs-build/packages/ux/modern/ux-debug.js"
+        ]
+    }]
+}

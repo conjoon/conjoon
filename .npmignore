@@ -11,3 +11,5 @@
 /tests.redirect.html
 /.extjs-link.conf.json
 /buildtest/
+
+.extjs-build
