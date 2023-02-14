@@ -47,7 +47,7 @@
         "deps:prod:latest": "npm i -P @conjoon/extjs-app-webmail@latest @conjoon/extjs-dev-webmailsim@latest @conjoon/extjs-app-localmailaccount@latest @coon-js/extjs-lib-comp@latest @coon-js/extjs-lib-core@latest",
         "deps:prod:local": "npm i -P t @coon-js/extjs-lib-comp@file:../../@coon-js/extjs-lib-comp",
         "test:siesta": "npx ws --port 8099 --static.index tests.redirect.html --open",
-        "update:app.json": "node bin/updateAppJson.js"
+        "update:app.json": "node bin/updateAppJson.mjs"
     },
     "standard-version": {
         "scripts": {
