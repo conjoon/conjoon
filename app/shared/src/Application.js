@@ -101,10 +101,10 @@ Ext.define("conjoon.Application", {
     onAppUpdate () {
         "use strict";
 
-        coon.Announcement.show({
+        coon.Announcement.urge({
             "message": `This application can be updated to ${Ext.manifest?.version || "a new version"}, reload?`,
             "yes": () => window.location.reload(),
-            "no": bar => bar.hide(),
+            "no": bar => () => {},
             "type": "warning"
         });
     }

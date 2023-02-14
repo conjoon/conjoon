@@ -99,7 +99,7 @@ StartTest(t => {
 
             t.it("onAppUpdate()", t => {
 
-                let announcementSpy = t.spyOn(coon.Announcement, "show").and.callFake(() => {});
+                let announcementSpy = t.spyOn(coon.Announcement, "urge").and.callFake(() => {});
 
                 conjoon.Application.prototype.onAppUpdate();
 
@@ -124,7 +124,8 @@ StartTest(t => {
                 let barMock = {hide: function (){}},
                     announcementHideSpy = t.spyOn(barMock, "hide").and.callThrough();
                 args.no(barMock);
-                t.expect(announcementHideSpy.calls.all().length).toBe(1);
+                // removed hide() since this is called right after any callback of yes/no is called
+                t.expect(announcementHideSpy.calls.all().length).toBe(0);
 
                 [announcementHideSpy, announcementSpy].map(spy => spy.remove());
 
