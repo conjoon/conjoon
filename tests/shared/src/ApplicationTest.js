@@ -104,18 +104,36 @@ StartTest(t => {
                 conjoon.Application.prototype.onAppUpdate();
 
                 let args = announcementSpy.calls.mostRecent().args[0];
-                t.expect(args.message).toBe("This application can be updated to a new version, reload?");
+                t.expect(args.message).toBe("This application can be updated from an older version to a newer version, reload?");
                 t.expect(args.type).toBe("warning");
                 t.expect(typeof args.yes).toBe("function");
                 t.expect(typeof args.no).toBe("function");
 
+                const tmpManifest = Ext.manifest;
                 Ext.manifest = {
                     version: "1.1.0-beta.10"
                 };
+
                 conjoon.Application.prototype.onAppUpdate();
                 args = announcementSpy.calls.mostRecent().args[0];
-                t.expect(args.message).toBe("This application can be updated to 1.1.0-beta.10, reload?");
+                t.expect(args.message).toBe("This application can be updated from 1.1.0-beta.10 to a newer version, reload?");
 
+                const tmpMicro = Ext.Microloader;
+                Ext.Microloader = {
+                    manifest: {
+                        content: {
+                            version: "1.1.0-beta.14"
+                        }
+                    }
+                };
+                conjoon.Application.prototype.onAppUpdate();
+                args = announcementSpy.calls.mostRecent().args[0];
+                t.expect(args.message).toBe("This application can be updated from 1.1.0-beta.10 to 1.1.0-beta.14, reload?");
+
+                delete Ext.manifest;
+                conjoon.Application.prototype.onAppUpdate();
+                args = announcementSpy.calls.mostRecent().args[0];
+                t.expect(args.message).toBe("This application can be updated from an older version to 1.1.0-beta.14, reload?");
 
                 // yes
                 t.expect("" + args.yes).toBe("() => window.location.reload()");
@@ -128,7 +146,8 @@ StartTest(t => {
                 t.expect(announcementHideSpy.calls.all().length).toBe(0);
 
                 [announcementHideSpy, announcementSpy].map(spy => spy.remove());
-
+                Ext.Microloader = tmpMicro;
+                Ext.manifest = tmpManifest;
             });
         
         });
