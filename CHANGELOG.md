@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.14](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.13...v1.1.0-beta.14) (2023-02-14)
+
+
+### Bug Fixes
+
+* cached version from Ext.manifest shown in onAppUpdate with AnnouncementBar ([1c30fcc](https://github.com/conjoon/conjoon/commit/1c30fcc5437994648dd9ad95e5d80c078779bdcd)), closes [conjoon/conjoon#26](https://github.com/conjoon/conjoon/issues/26)
+
 ## [1.1.0-beta.13](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.12...v1.1.0-beta.13) (2023-02-14)
 
 ## [1.1.0-beta.12](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.11...v1.1.0-beta.12) (2023-02-14)
