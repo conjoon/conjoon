@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.15](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.14...v1.1.0-beta.15) (2023-02-14)
+
+
+### Bug Fixes
+
+* change path to newer version to Ext.Microloader.appUpdate.manifest.version ([fd7ff1b](https://github.com/conjoon/conjoon/commit/fd7ff1b9d61299535ff14f1b01307fd22c63d20e)), closes [conjoon/conjoon#26](https://github.com/conjoon/conjoon/issues/26)
+
 ## [1.1.0-beta.14](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.13...v1.1.0-beta.14) (2023-02-14)
 
 
