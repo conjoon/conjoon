@@ -15,6 +15,7 @@
       "../extjs-dev-imapusersim",
       "../extjs-dev-webmailsim",
       "../extjs-theme-material",
-      "../../@coon-js/extjs-lib-core"
+      "../../@coon-js/extjs-lib-core",
+      "../../@coon-js/extjs-lib-comp"
     ]
 }

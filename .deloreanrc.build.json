@@ -16,6 +16,7 @@
       "./node_modules/@conjoon/extjs-dev-imapusersim",
       "./node_modules/@conjoon/extjs-dev-webmailsim",
       "./node_modules/@conjoon/extjs-theme-material",
-      "./node_modules/@coon-js/extjs-lib-core"
+      "./node_modules/@coon-js/extjs-lib-core",
+      "./node_modules/@coon-js/extjs-lib-comp"
     ]
 }
