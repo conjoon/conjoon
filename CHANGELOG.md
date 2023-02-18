@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.20](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.19...v1.1.0-beta.20) (2023-02-18)
+
+
+### Features
+
+* add basic component state support ([b99a129](https://github.com/conjoon/conjoon/commit/b99a1295d964ff53465a4c33c633533bf50daba5))
+
 ## [1.1.0-beta.19](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.18...v1.1.0-beta.19) (2023-02-17)
 
 ## [1.1.0](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.18...v1.1.0) (2023-02-17)
