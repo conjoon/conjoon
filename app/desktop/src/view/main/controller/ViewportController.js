@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2017-2021 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2017-2023 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -42,43 +42,14 @@ Ext.define("conjoon.view.main.controller.ViewportController", {
      *
      * see {@link #hideNavigation}
      */
-    onHideNavigationClick: function (btn) {
+    onHideNavigationClick (btn) {
 
         var me      = this,
             view    = me.getView(),
             navTree = view.lookup("cn_navport_ref_conwrap")
                 .lookup("cn_navport_ref_navtree");
 
-        me.hideNavigation(!navTree.getMicro());
-    },
-
-
-    /**
-     * Hides the NavigationTree by only setting it to Micro Mode.
-     *
-     * @param {Boolean} hide True to hide the NavigationTree, otherwise false.
-     */
-    hideNavigation: function (hide) {
-
-        var me          = this,
-            view        = me.getView(),
-            contentWrap = view.lookup("cn_navport_ref_conwrap"),
-            navTree     = contentWrap.lookup("cn_navport_ref_navtree"),
-            appLogo     = view.lookup("cn_navport_ref_tbar")
-                .lookup("cn_navport_ref_applogo"),
-            newWidth    = hide ? 64 : 250;
-
-        appLogo.animate({
-            dynamic: true,
-            to: {
-                width: newWidth
-            }
-        });
-
-        navTree.setWidth(newWidth);
-        navTree.setMicro(hide);
-
-        contentWrap.updateLayout({isRoot: true});
+        me.getView().hideNavigation(!navTree.getMicro());
     }
 
 });

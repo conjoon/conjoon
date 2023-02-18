@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2022 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2022-2023 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -37,5 +37,15 @@ export default [{
             name: "WorkbenchQuotes",
             url: "desktop/src/plugin/WorkbenchQuotesTest.js"
         }]
+    }, {
+        group: "view",
+        items: [{
+            group: "main",
+            items: [{
+                name: "ViewportTest",
+                url: "desktop/src/view/main/ViewportTest.js"
+            }]
+        }]
+
     }]
 }];

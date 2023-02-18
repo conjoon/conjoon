@@ -149,6 +149,19 @@ StartTest(t => {
                 Ext.Microloader = tmpMicro;
                 Ext.manifest = tmpManifest;
             });
+
+
+            t.it("launchHook() installs StateProvider", t => {
+
+                const callParentSpy = t.spyOn(conjoon.Application.prototype, "callParent").and.callFake(() => {});
+                const setProviderSpy = t.spyOn(Ext.state.Manager, "setProvider");
+
+                conjoon.Application.prototype.launchHook();
+
+                t.isInstanceOf(setProviderSpy.calls.mostRecent().args[0], "Ext.state.CookieProvider");
+
+                [setProviderSpy, callParentSpy].map(spy => spy.remove());
+            });
         
         });
 });

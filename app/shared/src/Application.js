@@ -38,7 +38,9 @@ Ext.define("conjoon.Application", {
         "conjoon.view.main.Viewport",
         "coon.core.ConfigManager",
         "coon.comp.component.AnnouncementBar",
-        "Ext.util.Cookies"
+        "Ext.util.Cookies",
+        "Ext.state.Manager",
+        "Ext.state.CookieProvider"
     ],
 
     controllers: [
@@ -82,6 +84,7 @@ Ext.define("conjoon.Application", {
      * @returns {*}
      */
     launchHook: function () {
+        Ext.state.Manager.setProvider(Ext.create("Ext.state.CookieProvider"));
         Ext.getBody().removeCls("launching");
 
         const splash = document.getElementById("splash");

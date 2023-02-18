@@ -1,7 +1,7 @@
 /**
  * conjoon
  * conjoon
- * Copyright (C) 2017-2021 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
+ * Copyright (C) 2017-2023 Thorsten Suckow-Homberg https://github.com/conjoon/conjoon
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -35,6 +35,77 @@ Ext.define("conjoon.view.main.Viewport", {
         "conjoon.view.main.controller.ViewportController"
     ],
 
-    controller: "cn_app-mainviewport-ctrl"
+    controller: "cn_app-mainviewport-ctrl",
 
+    stateId: "cn_app-mainviewport",
+
+    stateful: {
+        micro: true
+    },
+
+    stateEvents: [],
+
+    getState () {
+        const
+            me   = this,
+            navTree = me.getNavTree();
+
+        return {
+            micro: navTree.getMicro()
+        };
+    },
+
+
+    applyState (state) {
+        const me = this;
+        me.microNavigation(!!state?.micro);
+    },
+
+
+    /**
+     * Hides the NavigationTree by only setting it to Micro Mode.
+     *
+     * @param {Boolean} hide True to hide the NavigationTree, otherwise false.
+     */
+    hideNavigation (hide) {
+
+        const
+            me = this,
+            contentWrap = me.lookup("cn_navport_ref_conwrap");
+
+        me.microNavigation(hide);
+        me.onStateChange();
+
+        contentWrap.updateLayout({isRoot: true});
+    },
+
+
+    microNavigation (hide)
+    {
+        const
+            me = this,
+            navTree = me.getNavTree(),
+            appLogo = me.getAppLogo(),
+            width = hide ? 64 : 250;
+
+        appLogo.animate({
+            dynamic: true,
+            to: {width}
+        });
+
+        navTree.setWidth(width);
+        navTree.setMicro(hide);
+    },
+
+
+    getAppLogo () {
+        const me = this;
+        return me.lookup("cn_navport_ref_tbar").lookup("cn_navport_ref_applogo");
+    },
+
+
+    getNavTree () {
+        const me = this;
+        return me.lookup("cn_navport_ref_conwrap").lookup("cn_navport_ref_navtree");
+    }
 });
