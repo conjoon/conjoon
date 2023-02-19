@@ -58,7 +58,7 @@ Ext.define("conjoon.view.main.Viewport", {
 
     applyState (state) {
         const me = this;
-        me.microNavigation(!!state?.micro);
+        me.microNavigation(!!state?.micro, false);
     },
 
 
@@ -68,7 +68,6 @@ Ext.define("conjoon.view.main.Viewport", {
      * @param {Boolean} hide True to hide the NavigationTree, otherwise false.
      */
     hideNavigation (hide) {
-
         const
             me = this,
             contentWrap = me.lookup("cn_navport_ref_conwrap");
@@ -80,7 +79,7 @@ Ext.define("conjoon.view.main.Viewport", {
     },
 
 
-    microNavigation (hide)
+    microNavigation (hide, animate)
     {
         const
             me = this,
@@ -88,10 +87,14 @@ Ext.define("conjoon.view.main.Viewport", {
             appLogo = me.getAppLogo(),
             width = hide ? 64 : 250;
 
-        appLogo.animate({
-            dynamic: true,
-            to: {width}
-        });
+        if (animate) {
+            appLogo.animate({
+                dynamic: true,
+                to: {width}
+            });
+        } else {
+            appLogo.setWidth(width);
+        }
 
         navTree.setWidth(width);
         navTree.setMicro(hide);

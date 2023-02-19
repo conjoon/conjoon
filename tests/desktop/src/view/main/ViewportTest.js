@@ -88,6 +88,7 @@ StartTest(async t => {
         viewport.applyState(state);
 
         t.expect(microNavigationSpy.calls.mostRecent().args[0]).toBe(!!FAKE_MICRO_VALUE);
+        t.expect(microNavigationSpy.calls.mostRecent().args[1]).toBe(false);
 
         [navTreeSpy, microNavigationSpy].map(spy => spy.remove());
 
