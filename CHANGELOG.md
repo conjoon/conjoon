@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.23](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.22...v1.1.0-beta.23) (2023-02-19)
+
+
+### Bug Fixes
+
+* animation not shown of navigation panel when resizing ([2f4c633](https://github.com/conjoon/conjoon/commit/2f4c633a2996816baf4299e48d37159ca574dc6c))
+
 ## [1.1.0-beta.22](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.21...v1.1.0-beta.22) (2023-02-19)
 
 ## [1.1.0-beta.21](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.20...v1.1.0-beta.21) (2023-02-19)
