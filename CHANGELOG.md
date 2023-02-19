@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.21](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.20...v1.1.0-beta.21) (2023-02-19)
+
+
+### Bug Fixes
+
+* favicon missing in prod build ([725619c](https://github.com/conjoon/conjoon/commit/725619ce8ee49269fa2e2780489a6cb9df1d4830)), closes [conjoon/conjoon#24](https://github.com/conjoon/conjoon/issues/24)
+* navigation initially set to micro uses animation although it should not ([ead7350](https://github.com/conjoon/conjoon/commit/ead7350f4a90e529efc3b67fc52bbbbd04b4a23b))
+
 ## [1.1.0-beta.20](https://github.com/conjoon/conjoon/compare/v1.1.0-beta.19...v1.1.0-beta.20) (2023-02-18)
 
 
