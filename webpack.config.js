@@ -1,7 +1,8 @@
 const path = require('path');
 const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
 const portfinder = require('portfinder');
-
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const fs = require("fs");
 module.exports = async function (env) {
   
   // Utility function for retrieving environment variables
@@ -70,6 +71,17 @@ module.exports = async function (env) {
         watch: watch,
         verbose: verbose,
         cmdopts: cmdopts
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{
+          from: path.resolve(__dirname, './favicon.ico'),
+          to: path.join(
+              __dirname,
+              "build",
+              environment,
+              JSON.parse(fs.readFileSync(path.resolve(__dirname, './app.json'))).name
+          )
+        }]
       })
     ]
     return {
