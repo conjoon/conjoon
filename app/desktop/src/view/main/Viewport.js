@@ -87,7 +87,7 @@ Ext.define("conjoon.view.main.Viewport", {
             appLogo = me.getAppLogo(),
             width = hide ? 64 : 250;
 
-        if (animate) {
+        if (animate !== false) {
             appLogo.animate({
                 dynamic: true,
                 to: {width}
