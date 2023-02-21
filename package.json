@@ -97,7 +97,7 @@
     "dependencies": {
         "@conjoon/extjs-app-imapuser": "^1.0.2",
         "@conjoon/extjs-app-localmailaccount": "^1.0.2",
-        "@conjoon/extjs-app-webmail": "^1.0.13",
+        "@conjoon/extjs-app-webmail": "^1.0.14",
         "@conjoon/extjs-dev-imapusersim": "^1.0.5",
         "@conjoon/extjs-dev-webmailsim": "^1.0.4",
         "@conjoon/extjs-theme-material": "^0.3.1",
