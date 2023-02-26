@@ -40,7 +40,7 @@
         "test": "npm run test:siesta",
         "postversion": "git push && git push --tags",
         "release": "npm run preversion && standard-version --commit-all",
-        "preversion": "npm run deps:prod:latest && npx delorean -r",
+        "preversion": "npx delorean -r",
         "release:patch": "npm run preversion && standard-version --commit-all --release-as patch && npm run postversion",
         "release:minor": "npm run preversion && standard-version --commit-all --release-as minor && npm run postversion",
         "release:major": "npm run preversion && standard-version --commit-all --release-as major && npm run postversion",
