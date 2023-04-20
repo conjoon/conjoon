@@ -52,6 +52,24 @@
                 },
                 "config": {
                     "title": "Email",
+                    "ioc": {
+                        "bindings": {
+                            "conjoon.cn_mail": {
+                                "conjoon.cn_mail.view.mail.EmailAddressLinkRenderer": {
+                                    "xclass": "conjoon.cn_mail.view.mail.EmailAddressLinkRenderer",
+                                    "singleton": true
+                                },
+                                "conjoon.cn_mail.text.EmailAddressStringParser": {
+                                    "xclass": "conjoon.cn_mail.text.EmailAddressStringParser",
+                                    "singleton": true
+                                },
+                                "conjoon.cn_mail.text.QueryStringParser": {
+                                    "xclass": "conjoon.cn_mail.text.QueryStringParser",
+                                    "singleton": true
+                                }
+                            }
+                        }
+                    },
                     "plugins": {
                         "components": [
                             {

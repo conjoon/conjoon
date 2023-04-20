@@ -52,6 +52,24 @@
                 },
                 "config": {
                     "title": "Email",
+                    "ioc": {
+                        "bindings": {
+                            "conjoon.cn_mail": {
+                                "conjoon.cn_mail.view.mail.EmailAddressLinkRenderer": {
+                                    "xclass": "conjoon.cn_mail.view.mail.EmailAddressLinkRenderer",
+                                    "singleton": true
+                                },
+                                "conjoon.cn_mail.text.EmailAddressStringParser": {
+                                    "xclass": "conjoon.cn_mail.text.EmailAddressStringParser",
+                                    "singleton": true
+                                },
+                                "conjoon.cn_mail.text.QueryStringParser": {
+                                    "xclass": "conjoon.cn_mail.text.QueryStringParser",
+                                    "singleton": true
+                                }
+                            }
+                        }
+                    },
                     "plugins": {
                         "components": [
                             {
@@ -101,7 +119,7 @@
                 }
             },
             "extjs-app-imapuser": {
-                "disabled": false,
+                "disabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -125,7 +143,7 @@
                 }
             },
             "extjs-dev-imapusersim": {
-                "disabled": false,
+                "disabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -138,7 +156,7 @@
                 }
             },
             "extjs-app-localmailaccount": {
-                "disabled": true,
+                "disabled": false,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -166,7 +184,7 @@
                 }
             },
             "extjs-dev-webmailsim": {
-                "disabled": false,
+                "disabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
