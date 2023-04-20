@@ -1,7 +1,7 @@
 {
     "name": "conjoon",
     "namespace": "conjoon",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "framework": "ext",
     "template": "classicdesktop",
     "indexHtmlPath": "index.html",
