@@ -47,6 +47,7 @@
         "packages": {
 
             "extjs-app-webmail": {
+                "enabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -119,7 +120,7 @@
                 }
             },
             "extjs-app-imapuser": {
-                "disabled": true,
+                "enabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -143,7 +144,7 @@
                 }
             },
             "extjs-dev-imapusersim": {
-                "disabled": true,
+                "enabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -156,7 +157,7 @@
                 }
             },
             "extjs-app-localmailaccount": {
-                "disabled": false,
+                "enabled": false,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -184,7 +185,7 @@
                 }
             },
             "extjs-dev-webmailsim": {
-                "disabled": true,
+                "enabled": true,
                 "autoLoad": {
                     "registerController": true
                 },
@@ -213,6 +214,7 @@
             },
 
             "extjs-ctrl-simmanager": {
+                "enabled": true,
                 "autoLoad": {
                     "registerController": true
                 }

@@ -105,7 +105,7 @@
         "@coon-js/extjs-comp-navport": "^0.2.4",
         "@coon-js/extjs-ctrl-simmanager": "^0.2.4",
         "@coon-js/extjs-lib-comp": "^1.0.1",
-        "@coon-js/extjs-lib-core": "^1.1.0",
+        "@coon-js/extjs-lib-core": "^1.1.1",
         "@l8js/l8": "^0.12.1",
         "t": "^0.5.1"
     },
