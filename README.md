@@ -27,15 +27,7 @@ Install [Node.js](https://nodejs.org/en/download) and create a new **conjoon** s
 npx create-conjoon@latest target_folder
 ```
 
-Follow the instructions on screen.
-
-
-```bash
-cd target_folder
-npm run stage
-```
-
-Your site starts at `http://localhost:9001` with a production build of **conjoon**.
+Follow the instructions on screen, and refer to [the docs](https://www.conjoon.org/docs/api/misc/@conjoon/create-conjoon) for more information on how to use **create-conjoon**.
 
 
 ## Features 🎁
